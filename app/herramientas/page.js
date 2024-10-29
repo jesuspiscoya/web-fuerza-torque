@@ -5,7 +5,7 @@ import Slider from "@/components/Slider";
 import Image from "next/image";
 import { rubik } from "../fonts";
 
-export default function Maintenance() {
+export default function Tools() {
   const images = [
     { img: "/images/herramientas.jpg" },
     { img: "/images/industrias.jpg" },
@@ -17,15 +17,15 @@ export default function Maintenance() {
     <>
       <Navbar />
       <div
-        className="h-80 md:h-[25rem] bg-no-repeat bg-cover"
-        style={{ backgroundImage: `url('/images/mantenimiento.jpg')` }}
+        className="h-80 md:h-[25rem] bg-no-repeat bg-cover bg-bottom"
+        style={{ backgroundImage: `url('/images/herramientas.png')` }}
       >
         <div className="w-full h-full bg-black/70 flex justify-center items-center">
           <ScrollAnimation to="top">
             <h1
               className={`text-4xl md:text-6xl font-bold text-yellow-700 ${rubik.className}`}
             >
-              Mantenimiento
+              Herramientas
             </h1>
           </ScrollAnimation>
         </div>
@@ -37,23 +37,23 @@ export default function Maintenance() {
               <span
                 className={`text-md md:text-lg font-bold text-red-700 ${rubik.className}`}
               >
-                Servicio
+                Producto
               </span>
             </ScrollAnimation>
             <ScrollAnimation to="left" delay={400}>
               <h1
                 className={`text-3xl md:text-4xl font-bold text-yellow-700 ${rubik.className}`}
               >
-                Mantenimiento
+                Herramientas Neumáticas
               </h1>
             </ScrollAnimation>
             <ScrollAnimation to="left" delay={600}>
               <p className="text-sm md:text-md text-gray-300">
-                Contamos con el servicio técnico de mantenimiento de equipos
-                manuales, neumáticos, hidráulicos y eléctrico que va más allá de
-                lo que se ofrece actualmente, es un servicio técnico integral
-                que tiene como principales objetivos la orientación al cliente,
-                con atención personaliza y profesional.
+                Ofrecemos una amplia gama de herramientas neumáticas de alta
+                calidad, ideales para profesionales y aficionados del bricolaje
+                que buscan eficiencia y precisión en sus trabajos. Nuestras
+                herramientas están diseñadas para facilitar una variedad de
+                aplicaciones, desde la construcción hasta la automoción.
               </p>
             </ScrollAnimation>
           </div>
@@ -83,7 +83,7 @@ export default function Maintenance() {
               >
                 <Image
                   src={item.img}
-                  alt="Mantenimiento"
+                  alt="Herramientas"
                   width={1000}
                   height={1000}
                   className="h-48 w-full md:h-80 object-cover"
