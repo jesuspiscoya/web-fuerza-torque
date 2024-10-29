@@ -2,20 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.btn-contact:hover {
+  box-shadow: none !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.parallax-bg {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: url("/images/industrias4.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.parallax-bg-2 {
+  position: absolute;
+  background-image: url("/images/marcas.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.animate-carousel {
+  animation: move 25s linear infinite;
+  width: calc(15rem * 8 + 3rem * 8);
+}
+
+.ring-bottom {
+  transition: all 300ms;
+}
+
+.ring-bottom:hover {
+  transition: all 300ms;
+  box-shadow: 0 1px 0.5px #d2ba00;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  100% {
+    transform: translateX(calc(-15rem * 4 - 3rem * 4));
+  }
 }
