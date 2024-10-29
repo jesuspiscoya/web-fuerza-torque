@@ -22,8 +22,7 @@ export default function Footer() {
             alt="Logo de la empresa"
             width={1000}
             height={1000}
-            objectFit="cover"
-            className="h-16 w-auto md:h-20 my-auto"
+            className="h-16 w-auto md:h-20 my-auto object-cover"
           />
           <div className="flex gap-7">
             <a
@@ -130,7 +129,7 @@ export default function Footer() {
               "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
             }
             alt="WhatsApp"
-            layout="fill"
+            fill
           />
         </div>
       </a>

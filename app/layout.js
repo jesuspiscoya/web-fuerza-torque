@@ -6,6 +6,9 @@ export const metadata = {
   title: "Fuerza y Torque",
   description:
     "Servicios de alquiler, mantenimiento y reparación de herramientas hidráulicas y neumáticas.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {

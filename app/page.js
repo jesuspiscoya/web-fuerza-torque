@@ -7,6 +7,32 @@ import Image from "next/image";
 import { caveat, caveat_brush, rubik } from "./fonts";
 
 export default function Home() {
+  const slider = [
+    {
+      img: "/images/herramientas.jpg",
+      title: "Alquiler de Herramientas Hidráulicas y Neumáticas",
+      description:
+        "Ahorra en costos y espacio con una amplia gama de herramientas neumáticas en alquiler para todo tipo de proyectos, ideal para profesionales y aficionados",
+    },
+    {
+      img: "/images/industrias.jpg",
+      title: "Mantenimiento Especializado",
+      description:
+        "Nuestros expertos realizan un mantenimiento preventivo y correctivo para asegurar el máximo rendimiento y durabilidad de tus herramientas",
+    },
+    {
+      img: "/images/industrias2.jpg",
+      title: "Reparación Rápida y Eficiente",
+      description:
+        "Ofrecemos servicios de reparación rápida y efectiva, con piezas de alta calidad y un servicio al cliente excepcional",
+    },
+    {
+      img: "/images/asesoria.jpg",
+      title: "Asesoría Personalizada",
+      description:
+        "¿No sabes qué herramienta necesitas? Nuestro equipo te ofrece asesoría personalizada para encontrar la solución perfecta según tus requerimientos y presupuesto",
+    },
+  ];
   const services = [
     {
       title: "Mantenimiento",
@@ -30,7 +56,7 @@ export default function Home() {
 
   return (
     <>
-      <Slider />
+      <Slider pharagraph={slider} height={"h-screen"} />
       <Navbar />
       <div className="bg-gradient-to-t to-gray-900 from-blue-gray-900 text-center p-7 md:p-16">
         <ScrollAnimation to="top">
@@ -61,8 +87,8 @@ export default function Home() {
                   <Image
                     src={service.image}
                     alt={service.title}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="absolute opacity-0 pt-52 hover:pt-10 hover:opacity-100 flex flex-col gap-5 bg-black/80 top-0 bottom-0 justify-center items-center text-center transition-all duration-500 p-10 text-sm">

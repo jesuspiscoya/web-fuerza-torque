@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
@@ -65,7 +66,7 @@ export default function Navbar() {
     >
       {/* Navbar responsive mobile */}
       <div className="flex md:hidden justify-between items-center">
-        <a href="/">
+        <Link href="/">
           <Image
             src="/images/logo.png"
             alt="Logo Company"
@@ -73,7 +74,7 @@ export default function Navbar() {
             height={1000}
             className="w-24"
           />
-        </a>
+        </Link>
         <button
           ref={btnRef}
           className="flex md:hidden text-white"
@@ -90,19 +91,19 @@ export default function Navbar() {
           }`}
         >
           {items.map((item, index) => (
-            <a
+            <Link
               key={index}
               href={item.link}
               className="font-medium hover:text-red-500 hover:bg-blue-gray-700 transition duration-200 px-8 py-3"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
       {/* Navbar desktop */}
       <div className="container hidden md:flex justify-between items-center">
-        <a href="/">
+        <Link href="/">
           <Image
             src="/images/logo.png"
             alt="Logo Company"
@@ -110,16 +111,16 @@ export default function Navbar() {
             width={1000}
             height={1000}
           />
-        </a>
+        </Link>
         <ul className="flex gap-10">
           {items.map((item, index) => (
             <li key={index}>
-              <a
+              <Link
                 href={item.link}
                 className="font-semibold hover:text-red-500 transition duration-200"
               >
                 {item.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
