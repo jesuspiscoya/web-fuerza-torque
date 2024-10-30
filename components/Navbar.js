@@ -80,7 +80,7 @@ export default function Navbar() {
           className="flex md:hidden text-white"
           onClick={toggleMenu}
         >
-          <i className="fa-solid fa-bars fa-xl"></i>
+          <i className="fa-solid fa-bars fa-xl" aria-hidden="true"></i>
         </button>
         <div
           ref={menuRef}

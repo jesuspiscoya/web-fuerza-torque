@@ -30,21 +30,27 @@ export default function Footer() {
               target="_blank"
               className="font-medium transition-colors duration-500 hover:text-blue-400"
             >
-              <i className="fa-brands fa-facebook fa-2xl"></i>
+              <i
+                className="fa-brands fa-facebook fa-2xl"
+                aria-hidden="true"
+              ></i>
             </a>
             <a
               href="#"
               target="_blank"
               className="font-medium transition-colors duration-500 hover:text-red-500"
             >
-              <i className="fa-brands fa-youtube fa-2xl"></i>
+              <i className="fa-brands fa-youtube fa-2xl" aria-hidden="true"></i>
             </a>
             <a
               href="https://api.whatsapp.com/send?phone=51948911431&text=Hola!%F0%9F%91%8B%20Necesito%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios."
               target="_blank"
               className="font-medium transition-colors duration-500 hover:text-[#3ae44b]"
             >
-              <i className="fa-brands fa-whatsapp fa-2xl"></i>
+              <i
+                className="fa-brands fa-whatsapp fa-2xl"
+                aria-hidden="true"
+              ></i>
             </a>
           </div>
         </div>
@@ -79,17 +85,20 @@ export default function Footer() {
         <div className="flex flex-col md:items-end gap-6 md:max-w-56 cursor-default">
           <h1 className="text-lg font-semibold text-red-700">Contáctanos</h1>
           <div className="md:text-end">
-            <i className="fa-solid fa-phone me-2"></i>
+            <i className="fa-solid fa-phone me-2" aria-hidden="true"></i>
             <span className="text-[0.85rem] md:text-sm">+51 948 911 431</span>
           </div>
           <div className="md:text-end">
-            <i className="fa-solid fa-map-marker-alt me-2"></i>
+            <i
+              className="fa-solid fa-map-marker-alt me-2"
+              aria-hidden="true"
+            ></i>
             <span className="text-[0.85rem] md:text-sm">
               Lt 14. residencial Las Orquideas etapa 1, Callao - Perú
             </span>
           </div>
           <div className="md:text-end">
-            <i className="fa-solid fa-clock me-2"></i>
+            <i className="fa-solid fa-clock me-2" aria-hidden="true"></i>
             <span className="text-[0.85rem] md:text-sm">
               L-V de 08:00 am a 06:00 pm
               <br />
