@@ -5,6 +5,7 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 import Slider from "@/components/Slider";
 import Image from "next/image";
 import { caveat, caveat_brush, rubik } from "./fonts";
+import Link from "next/link";
 
 export default function Home() {
   const slider = [
@@ -37,22 +38,25 @@ export default function Home() {
     {
       title: "Mantenimiento",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, suscipit.",
+        "Realizamos mantenimientos profesionales de tipo preventivo, correctivo y predictivo",
       image: "/images/mantenimiento2.jpg",
+      url: "/servicios",
     },
     {
       title: "Reparación",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, suscipit.",
+      description: "Reparamos todo tipo de equipos y herramientas mayores.",
       image: "/images/industrias2.jpg",
+      url: "/servicios",
     },
     {
       title: "Alquiler",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, suscipit.",
+        "Alquilamos herramientas y equipos de alta calidad de marcas reconocidas.",
       image: "/images/herramientas.webp",
+      url: "/servicios",
     },
   ];
+  const year = new Date().getFullYear();
 
   return (
     <>
@@ -64,41 +68,43 @@ export default function Home() {
             className={`text-yellow-700
            font-semibold ${rubik.className}`}
           >
-            Más de 5 años de experiencia
+            Más de {year - 2020} años de experiencia
           </span>
         </ScrollAnimation>
         <ScrollAnimation to="left" delay={300}>
           <h1
-            className={`text-4xl text-white font-bold mt-4 mb-10 md:mb-14 ${rubik.className}`}
+            className={`text-3xl md:text-4xl text-white font-bold mt-4 mb-10 md:mb-14 ${rubik.className}`}
           >
             Nuestros Servicios
           </h1>
         </ScrollAnimation>
-        <div className="container flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col justify-center md:flex-row gap-10">
           {services.map((service, index) => (
             <ScrollAnimation
               to="bottom"
               key={index}
-              className="flex-1 flex flex-col gap-5 md:gap-10 text-center items-center"
+              className="flex flex-col gap-5 md:gap-10 text-center items-center"
               delay={index * 100 + 300}
             >
-              <div className="relative overflow-hidden hover:scale-[1.02] hover:-translate-y-2 transition-all duration-500">
-                <div className="relative h-80 w-80">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute opacity-0 pt-52 hover:pt-10 hover:opacity-100 flex flex-col gap-5 bg-black/80 top-0 bottom-0 justify-center items-center text-center transition-all duration-500 p-10 text-sm">
+              <div className="relative overflow-hidden hover:scale-[1.02] hover:-translate-y-2 duration-500">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={1000}
+                  height={1000}
+                  className="object-cover w-full h-80"
+                />
+                <div className="absolute opacity-0 pt-52 hover:pt-10 hover:opacity-100 flex flex-col gap-5 bg-black/80 top-0 bottom-0 justify-center items-center text-center duration-500 p-10 text-sm">
                   <h1 className="text-red-700 font-semibold text-xl">
                     {service.title}
                   </h1>
                   <p className="text-gray-400">{service.description}</p>
-                  <button className="text-white hover:text-yellow-700 font-semibold transition-all duration-500 px-3 py-1 rounded-lg">
+                  <Link
+                    href={service.url}
+                    className="text-white hover:text-yellow-700 font-semibold duration-500 px-3 py-1 rounded-lg"
+                  >
                     Ver más
-                  </button>
+                  </Link>
                 </div>
               </div>
             </ScrollAnimation>
@@ -118,7 +124,7 @@ export default function Home() {
             </ScrollAnimation>
             <ScrollAnimation
               to="bottom"
-              className="w-full text-center p-8 md:px-14 flex flex-col justify-center md:bg-black/70 rounded-3xl md:ring-1 md:shadow-2xl md:shadow-black"
+              className="w-full text-center p-8 md:px-14 flex flex-col justify-center md:bg-black/80 rounded-3xl md:ring-1 md:shadow-2xl md:shadow-black"
             >
               <h1 className="hidden md:block text-xl md:text-2xl font-bold text-yellow-700">
                 SOLUCIONES
@@ -131,7 +137,10 @@ export default function Home() {
               </p>
               <div className="flex flex-col md:flex-row mt-9 gap-7 md:gap-10">
                 <div className="rounded-2xl shadow-lg shadow-blue-gray-700 bg-blue-gray-900 border-2 border-yellow-300 w-full p-6 md:py-10 md:px-6 hover:scale-105 duration-500 hover:shadow-md">
-                  <i className="fa-solid fa-medal fa-2xl text-white"></i>
+                  <i
+                    className="fa-solid fa-medal fa-2xl text-white"
+                    aria-hidden="true"
+                  ></i>
                   <h2
                     className={`text-yellow-700 text-2xl my-4 font-semibold ${caveat.className}`}
                   >
@@ -144,7 +153,10 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="rounded-2xl shadow-lg shadow-blue-gray-700 bg-blue-gray-900 border-2 border-yellow-300 w-full p-6 md:py-10 md:px-6 hover:scale-105 duration-500 hover:shadow-md">
-                  <i className="fa-solid fa-helmet-safety fa-2xl text-red-700"></i>
+                  <i
+                    className="fa-solid fa-helmet-safety fa-2xl text-red-700"
+                    aria-hidden="true"
+                  ></i>
                   <h2
                     className={`text-yellow-700 text-2xl my-4 font-semibold ${caveat.className}`}
                   >
@@ -162,7 +174,7 @@ export default function Home() {
       </div>
       <div className="relative bg-blue-gray-900 overflow-hidden py-14 md:py-28">
         <div className="parallax-bg-2 top-14 bottom-14 md:top-28 md:bottom-28" />
-        <div className="relative h-full bg-black/70 text-yellow-50 w-full py-20 md:py-24">
+        <div className="relative h-full bg-black/80 text-yellow-50 w-full py-20 md:py-24">
           <div className="container flex flex-col gap-7">
             <ScrollAnimation to="right">
               <div className="flex flex-col items-center text-center md:items-start">

@@ -30,6 +30,7 @@ export default function Navbar() {
 
   const handleScroll = () => {
     setIsScrolled(window.scrollY > 50);
+    setIsOpen(false);
   };
 
   const toggleMenu = () => {
@@ -84,7 +85,7 @@ export default function Navbar() {
         </button>
         <div
           ref={menuRef}
-          className={`flex flex-col absolute top-[3.9rem] left-0 right-0 bg-gray-900 text-base transition-all duration-200 ease-in-out ${
+          className={`flex flex-col absolute top-[3.9rem] left-0 right-0 bg-blue-gray-800 text-base transition-all duration-200 ease-in-out ${
             isOpen
               ? "max-h-64 opacity-100"
               : "max-h-0 opacity-100 overflow-hidden"
@@ -99,6 +100,12 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
+          <Link
+            href="/contacto"
+            className="font-medium hover:text-red-500 hover:bg-blue-gray-700 transition duration-200 px-8 py-3"
+          >
+            Contacto
+          </Link>
         </div>
       </div>
       {/* Navbar desktop */}
@@ -124,13 +131,13 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <a
-          href="#"
+        <Link
+          href="/contacto"
           style={{ boxShadow: "0 3px 0 0 white" }}
           className="btn-contact bg-yellow-700 border-2 hover:bg-yellow-800 border-black rounded-full px-6 py-2 text-black font-medium transition duration-500 hover:text-white"
         >
           Contacto
-        </a>
+        </Link>
       </div>
     </nav>
   );

@@ -20,7 +20,7 @@ export default function Tools() {
         className="h-80 md:h-[25rem] bg-no-repeat bg-cover bg-bottom"
         style={{ backgroundImage: `url('/images/herramientas.png')` }}
       >
-        <div className="w-full h-full bg-black/70 flex justify-center items-center">
+        <div className="w-full h-full bg-black/80 flex justify-center items-center">
           <ScrollAnimation to="top">
             <h1
               className={`text-4xl md:text-6xl font-bold text-yellow-700 ${rubik.className}`}
@@ -35,7 +35,7 @@ export default function Tools() {
           <div className="flex flex-col text-center md:text-left gap-4 md:gap-5 w-full">
             <ScrollAnimation to="left" delay={200}>
               <span
-                className={`text-md md:text-lg font-bold text-red-700 ${rubik.className}`}
+                className={`md:text-lg font-bold text-red-700 ${rubik.className}`}
               >
                 Producto
               </span>

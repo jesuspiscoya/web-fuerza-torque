@@ -1,6 +1,21 @@
 import Image from "next/image";
 
 export default function Footer() {
+  const socialNetworks = [
+    {
+      name: "Facebook",
+      icon: "fa-facebook",
+      color: "text-blue-400",
+      url: "https://www.facebook.com/fuerzaytorquecompany",
+    },
+    { name: "YouTube", icon: "fa-youtube", color: "text-red-500", url: "#" },
+    {
+      name: "WhatsApp",
+      icon: "fa-whatsapp",
+      color: "text-[#3ae44b]",
+      url: "https://api.whatsapp.com/send?phone=51948911431&text=Hola!%F0%9F%91%8B%20Necesito%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios.",
+    },
+  ];
   const products = [
     { name: "Herramientas hidráulicas", url: "/herramientas" },
     { name: "Herramientas neumáticas", url: "/herramientas" },
@@ -10,6 +25,17 @@ export default function Footer() {
     { name: "Mantenimiento", url: "/servicios" },
     { name: "Reparación", url: "/servicios" },
     { name: "Alquiler", url: "/servicios" },
+  ];
+  const contact = [
+    { name: "+51 948 911 431", icon: "fa-phone" },
+    {
+      name: "Lt 14. residencial Las Orquideas etapa 1, Callao - Perú",
+      icon: "fa-map-marker-alt",
+    },
+    {
+      name: "L-V de 08:00 am a 06:00 pm\nSáb. de 09:00 am a 12:00 pm",
+      icon: "fa-clock",
+    },
   ];
   const year = new Date().getFullYear();
 
@@ -25,33 +51,19 @@ export default function Footer() {
             className="h-16 w-auto md:h-20 my-auto object-cover"
           />
           <div className="flex gap-7">
-            <a
-              href="#"
-              target="_blank"
-              className="font-medium transition-colors duration-500 hover:text-blue-400"
-            >
-              <i
-                className="fa-brands fa-facebook fa-2xl"
-                aria-hidden="true"
-              ></i>
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              className="font-medium transition-colors duration-500 hover:text-red-500"
-            >
-              <i className="fa-brands fa-youtube fa-2xl" aria-hidden="true"></i>
-            </a>
-            <a
-              href="https://api.whatsapp.com/send?phone=51948911431&text=Hola!%F0%9F%91%8B%20Necesito%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios."
-              target="_blank"
-              className="font-medium transition-colors duration-500 hover:text-[#3ae44b]"
-            >
-              <i
-                className="fa-brands fa-whatsapp fa-2xl"
-                aria-hidden="true"
-              ></i>
-            </a>
+            {socialNetworks.map((network, index) => (
+              <a
+                key={index}
+                href={network.url}
+                target="_blank"
+                className={`font-medium transition-colors duration-500 hover:${network.color}`}
+              >
+                <i
+                  className={`fa-brands ${network.icon} fa-2xl`}
+                  aria-hidden="true"
+                ></i>
+              </a>
+            ))}
           </div>
         </div>
         <div className="hidden md:flex flex-col items-end gap-6 max-w-56">
@@ -84,27 +96,15 @@ export default function Footer() {
         </div>
         <div className="flex flex-col md:items-end gap-6 md:max-w-56 cursor-default">
           <h1 className="text-lg font-semibold text-red-700">Contáctanos</h1>
-          <div className="md:text-end">
-            <i className="fa-solid fa-phone me-2" aria-hidden="true"></i>
-            <span className="text-[0.85rem] md:text-sm">+51 948 911 431</span>
-          </div>
-          <div className="md:text-end">
-            <i
-              className="fa-solid fa-map-marker-alt me-2"
-              aria-hidden="true"
-            ></i>
-            <span className="text-[0.85rem] md:text-sm">
-              Lt 14. residencial Las Orquideas etapa 1, Callao - Perú
-            </span>
-          </div>
-          <div className="md:text-end">
-            <i className="fa-solid fa-clock me-2" aria-hidden="true"></i>
-            <span className="text-[0.85rem] md:text-sm">
-              L-V de 08:00 am a 06:00 pm
-              <br />
-              Sáb. de 09:00 am a 12:00 pm
-            </span>
-          </div>
+          {contact.map((item, index) => (
+            <div key={index} className="md:text-end">
+              <i
+                className={`fa-solid ${item.icon} me-2`}
+                aria-hidden="true"
+              ></i>
+              <span className="text-[0.85rem] md:text-sm">{item.name}</span>
+            </div>
+          ))}
         </div>
       </div>
       <div className="container flex flex-col md:flex-row gap-7 justify-between cursor-default">

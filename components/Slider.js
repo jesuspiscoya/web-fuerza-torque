@@ -32,7 +32,7 @@ export default function Slider({ pharagraph, height }) {
         setCurrentSlide((prev) => (prev + 1) % pharagraph.length);
         setIsVisible(true);
       },
-      pharagraph.title ? 700 : 0
+      pharagraph.some((item) => item.title) ? 700 : 0
     );
   };
 
@@ -46,7 +46,7 @@ export default function Slider({ pharagraph, height }) {
         );
         setIsVisible(true);
       },
-      pharagraph.title ? 700 : 0
+      pharagraph.some((item) => item.title) ? 700 : 0
     );
   };
 
@@ -66,7 +66,6 @@ export default function Slider({ pharagraph, height }) {
             key={index}
             className={`relative ${height} w-full flex-shrink-0 bg-cover bg-center`}
             style={{ backgroundImage: `url(${item.img})` }}
-            aria-hidden="false"
           >
             {item.title ? (
               <div className="absolute grid h-full w-full place-items-center bg-black/75">

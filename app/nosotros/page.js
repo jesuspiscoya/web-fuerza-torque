@@ -65,7 +65,7 @@ export default function AboutUs() {
         className="h-screen md:h-screen bg-no-repeat bg-cover"
         style={{ backgroundImage: `url('/images/nosotros.jpg')` }}
       >
-        <div className="w-full h-full bg-black/70 flex flex-col justify-center items-center text-center px-7">
+        <div className="w-full h-full bg-black/80 flex flex-col justify-center items-center text-center px-7">
           <ScrollAnimation to="top">
             <Image
               src="/images/logo-icono.png"
@@ -171,37 +171,37 @@ export default function AboutUs() {
                   <TabPanel
                     key={value}
                     value={value}
-                    className="flex gap-14 text-white px-16 py-10 bg-gradient-to-tl to-indigo-800 from-teal-900 border-2 border-blue-gray-50 rounded-xl mt-5"
+                    className="flex flex-col gap-6 text-center md:flex-row md:gap-14 md:text-start text-white p-7 md:px-16 md:py-10 bg-gradient-to-tl to-indigo-800 from-teal-900 border-2 border-blue-gray-50 rounded-xl mt-5"
                   >
                     <i
-                      className={`${icon} text-6xl text-yellow-500`}
+                      className={`${icon} text-5xl md:text-6xl text-yellow-500`}
                       aria-hidden="true"
                     ></i>
-                    <div className="w-full">
+                    <div>
                       <h1
-                        className={`text-5xl font-bold text-yellow-700 ${rubik.className}`}
+                        className={`text-3xl md:text-5xl font-bold text-yellow-700 ${rubik.className}`}
                       >
                         {label}
                       </h1>
                       {Array.isArray(desc) ? (
-                        <div className="flex gap-8 mt-10">
+                        <div className="grid md:grid-cols-5 gap-8 mt-10">
                           {desc.map((item, index) => (
                             <div
                               key={index}
-                              className={`p-5 bg-blue-gray-600 hover:bg-yellow-600/50 text-xl w-full rounded-md flex flex-col gap-4 justify-center text-center font-bold cursor-default transition-colors duration-500 ${rubik.className}`}
+                              className={`p-5 bg-blue-gray-600 hover:bg-yellow-600/55 text-xl rounded-md flex flex-col gap-4 justify-center text-center font-bold cursor-default duration-500 ${rubik.className}`}
                             >
-                              <div>
-                                <i
-                                  className={`${item.icon} fa-xl`}
-                                  aria-hidden="true"
-                                ></i>
-                              </div>
+                              <i
+                                className={`${item.icon} text-3xl`}
+                                aria-hidden="true"
+                              ></i>
                               {item.desc}
                             </div>
                           ))}
                         </div>
                       ) : (
-                        <p className={`text-xl mt-5 ${rubik.className}`}>
+                        <p
+                          className={`text-base mt-2 md:text-xl md:mt-5 ${rubik.className}`}
+                        >
                           {desc}
                         </p>
                       )}
