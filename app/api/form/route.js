@@ -4,7 +4,6 @@ import {
   validateForm,
 } from "@/app/lib/middleware";
 import nodemailer from "nodemailer";
-import logo from "@/public/logo.png";
 
 export async function POST(req) {
   const { name, email, phone, company, subject, message } = await req.json();
@@ -68,7 +67,7 @@ export async function POST(req) {
     <body>
       <div class="container">
         <div class="header">
-          <img src=${logo} alt="Logo de la Empresa">
+          <img src="" alt="Logo de la Empresa">
           <h2>Nuevo Mensaje de Contacto</h2>
         </div>
         <table>
