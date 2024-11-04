@@ -67,7 +67,7 @@ export async function POST(req) {
     <body>
       <div class="container">
         <div class="header">
-          <img src="" alt="Logo de la Empresa">
+          <img src="https://fuerzaytorque.com.pe/_next/image?url=%2Fimages%2Flogo.webp&w=640&q=75" alt="Logo de la Empresa">
           <h2>Nuevo Mensaje de Contacto</h2>
         </div>
         <table>
