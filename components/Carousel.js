@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Carousel() {
   const brands = [
-    { title: "Tarjeta 1", img: "/images/logo1.png" },
-    { title: "Tarjeta 2", img: "/images/logo2.png" },
-    { title: "Tarjeta 3", img: "/images/logo3.png" },
-    { title: "Tarjeta 4", img: "/images/logo4.jpg" },
+    { title: "Tarjeta 1", img: "/images/marca1.webp" },
+    { title: "Tarjeta 2", img: "/images/marca2.webp" },
+    { title: "Tarjeta 3", img: "/images/marca3.webp" },
+    { title: "Tarjeta 4", img: "/images/marca4.webp" },
   ];
 
   return (
@@ -19,8 +19,8 @@ export default function Carousel() {
             <Image
               src={brand.img}
               alt={brand.title}
-              width={1000}
-              height={1000}
+              width={500}
+              height={500}
               className="max-h-28 m-auto"
             />
           </div>

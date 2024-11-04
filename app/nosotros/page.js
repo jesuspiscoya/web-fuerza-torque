@@ -63,15 +63,15 @@ export default function AboutUs() {
       <Navbar />
       <div
         className="h-screen md:h-screen bg-no-repeat bg-cover"
-        style={{ backgroundImage: `url('/images/nosotros.jpg')` }}
+        style={{ backgroundImage: `url('/images/bg-nosotros.webp')` }}
       >
         <div className="w-full h-full bg-black/80 flex flex-col justify-center items-center text-center px-7">
           <ScrollAnimation to="top">
             <Image
-              src="/images/logo-icono.png"
+              src="/images/logo-icono.webp"
               alt="Logo company"
-              width={1000}
-              height={1000}
+              width={200}
+              height={200}
               className="w-32 md:w-40 mb-10"
             />
           </ScrollAnimation>

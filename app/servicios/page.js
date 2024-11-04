@@ -18,7 +18,7 @@ export default function Maintenance() {
       <Navbar />
       <div
         className="h-80 md:h-[25rem] bg-no-repeat bg-cover"
-        style={{ backgroundImage: `url('/images/mantenimiento.jpg')` }}
+        style={{ backgroundImage: `url('/images/mantenimiento.webp')` }}
       >
         <div className="w-full h-full bg-black/80 flex justify-center items-center">
           <ScrollAnimation to="top">
@@ -88,7 +88,7 @@ export default function Maintenance() {
                   height={1000}
                   className="h-48 w-full md:h-80 object-cover"
                 />
-                <div className="absolute hover:bg-black/50 transition-all duration-[600ms] top-0 bottom-0 left-0 right-0 cursor-pointer"></div>
+                <div className="absolute hover:bg-black/50 duration-[600ms] top-0 bottom-0 left-0 right-0 cursor-pointer"></div>
               </ScrollAnimation>
             ))}
           </div>

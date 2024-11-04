@@ -58,7 +58,7 @@ export default function Slider({ pharagraph, height }) {
   return (
     <div className={`${height} overflow-hidden`}>
       <div
-        className="transition-transform duration-500 flex"
+        className="duration-500 flex cursor-default"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {pharagraph.map((item, index) => (
@@ -71,7 +71,7 @@ export default function Slider({ pharagraph, height }) {
               <div className="absolute grid h-full w-full place-items-center bg-black/75">
                 <div className="w-3/4 text-center md:w-2/4 text-gray-300 flex flex-col gap-12">
                   <h1
-                    className={`text-4xl sm:text-5xl md:text-6xl font-bold text-yellow-700 transition-all duration-1000 ${
+                    className={`text-4xl sm:text-5xl md:text-6xl font-bold text-yellow-700 duration-1000 ${
                       lilita_one.className
                     } ${
                       isVisible
@@ -82,7 +82,7 @@ export default function Slider({ pharagraph, height }) {
                     {item.title}
                   </h1>
                   <p
-                    className={`text-base md:text-xl font-medium transition-all duration-1000 ${
+                    className={`text-base md:text-xl font-medium duration-1000 ${
                       isVisible
                         ? "opacity-100 translate-x-0"
                         : "opacity-0 -translate-x-20"
@@ -97,13 +97,13 @@ export default function Slider({ pharagraph, height }) {
         ))}
       </div>
       <button
-        className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white rounded-full px-3 py-1.5 hover:bg-gray-800/50 transition-colors duration-500"
+        className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white rounded-full px-3 py-1.5 hover:bg-gray-800/50 duration-500"
         onClick={prevSlide}
       >
         <i className="fa-solid fa-angle-left fa-lg" aria-hidden="true"></i>
       </button>
       <button
-        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white rounded-full px-3 py-1.5 hover:bg-gray-800/50 transition-colors duration-500"
+        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white rounded-full px-3 py-1.5 hover:bg-gray-800/50 duration-500"
         onClick={nextSlide}
       >
         <i className="fa-solid fa-angle-right fa-lg" aria-hidden="true"></i>

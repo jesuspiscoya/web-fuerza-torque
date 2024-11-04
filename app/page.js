@@ -4,8 +4,8 @@ import Navbar from "@/components/Navbar";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import Slider from "@/components/Slider";
 import Image from "next/image";
-import { caveat, caveat_brush, rubik } from "./fonts";
 import Link from "next/link";
+import { caveat, rubik } from "./fonts";
 
 export default function Home() {
   const slider = [
@@ -52,7 +52,7 @@ export default function Home() {
       title: "Alquiler",
       description:
         "Alquilamos herramientas y equipos de alta calidad de marcas reconocidas.",
-      image: "/images/herramientas.webp",
+      image: "/images/herramientas3.webp",
       url: "/servicios",
     },
   ];
@@ -78,15 +78,15 @@ export default function Home() {
             Nuestros Servicios
           </h1>
         </ScrollAnimation>
-        <div className="flex flex-col justify-center md:flex-row gap-10">
+        <div className="flex flex-col justify-center md:flex-row gap-7 md:gap-10">
           {services.map((service, index) => (
             <ScrollAnimation
               to="bottom"
               key={index}
-              className="flex flex-col gap-5 md:gap-10 text-center items-center"
+              className="w-full cursor-default"
               delay={index * 100 + 300}
             >
-              <div className="relative overflow-hidden hover:scale-[1.02] hover:-translate-y-2 duration-500">
+              <div className="relative overflow-hidden duration-500 hover:scale-[1.02] hover:-translate-y-2">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -94,7 +94,7 @@ export default function Home() {
                   height={1000}
                   className="object-cover w-full h-80"
                 />
-                <div className="absolute opacity-0 pt-52 hover:pt-10 hover:opacity-100 flex flex-col gap-5 bg-black/80 top-0 bottom-0 justify-center items-center text-center duration-500 p-10 text-sm">
+                <div className="absolute opacity-0 pt-52 hover:pt-10 hover:opacity-100 flex flex-col gap-5 bg-black/80 top-0 bottom-0 left-0 right-0 justify-center text-center duration-500 p-10 text-sm">
                   <h1 className="text-red-700 font-semibold text-xl">
                     {service.title}
                   </h1>
@@ -112,7 +112,10 @@ export default function Home() {
         </div>
       </div>
       <div className="relative flex min-h-screen md:overflow-hidden">
-        <div className="parallax-bg" />
+        <div
+          className="absolute top-0 bottom-0 bg-fixed bg-center bg-no-repeat bg-cover w-full"
+          style={{ backgroundImage: `url('/images/bg-que-hacemos.webp')` }}
+        />
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/75">
           <div className="container flex flex-col py-7 md:flex-row md:gap-10 text-center items-center h-full">
             <ScrollAnimation to="left" className="w-full md:text-start">
@@ -124,7 +127,7 @@ export default function Home() {
             </ScrollAnimation>
             <ScrollAnimation
               to="bottom"
-              className="w-full text-center p-8 md:px-14 flex flex-col justify-center md:bg-black/80 rounded-3xl md:ring-1 md:shadow-2xl md:shadow-black"
+              className="w-full text-center p-8 md:px-14 flex flex-col justify-center md:bg-black/80 rounded-3xl md:ring-1 md:shadow-2xl md:shadow-black cursor-default"
             >
               <h1 className="hidden md:block text-xl md:text-2xl font-bold text-yellow-700">
                 SOLUCIONES
@@ -173,7 +176,10 @@ export default function Home() {
         </div>
       </div>
       <div className="relative bg-blue-gray-900 overflow-hidden py-14 md:py-28">
-        <div className="parallax-bg-2 top-14 bottom-14 md:top-28 md:bottom-28" />
+        <div
+          className="absolute bg-center bg-no-repeat bg-cover w-full top-14 bottom-14 md:top-28 md:bottom-28"
+          style={{ backgroundImage: `url('/images/bg-marcas.webp')` }}
+        />
         <div className="relative h-full bg-black/80 text-yellow-50 w-full py-20 md:py-24">
           <div className="container flex flex-col gap-7">
             <ScrollAnimation to="right">

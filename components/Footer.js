@@ -44,10 +44,10 @@ export default function Footer() {
       <div className="container flex flex-col md:flex-row justify-between gap-10">
         <div className="flex flex-col items-center md:items-start gap-7 md:gap-0">
           <Image
-            src="/images/logo-white.png"
+            src="/images/logo-white.webp"
             alt="Logo de la empresa"
-            width={1000}
-            height={1000}
+            width={500}
+            height={500}
             className="h-16 w-auto md:h-20 my-auto object-cover"
           />
           <div className="flex gap-7">
@@ -56,7 +56,7 @@ export default function Footer() {
                 key={index}
                 href={network.url}
                 target="_blank"
-                className={`font-medium transition-colors duration-500 hover:${network.color}`}
+                className={`font-medium duration-500 hover:${network.color}`}
               >
                 <i
                   className={`fa-brands ${network.icon} fa-2xl`}
@@ -74,7 +74,7 @@ export default function Footer() {
             <a
               key={index}
               href={product.url}
-              className="text-sm transition-colors duration-500 pb-1 hover:text-yellow-600 ring-bottom hover:border-yellow-700"
+              className="text-sm duration-500 pb-1 hover:text-yellow-600 ring-bottom"
             >
               {product.name}
             </a>
@@ -88,7 +88,7 @@ export default function Footer() {
             <a
               key={index}
               href={service.url}
-              className="text-sm transition-colors duration-500 pb-1 hover:text-yellow-600 ring-bottom hover:border-yellow-700"
+              className="text-sm duration-500 pb-1 hover:text-yellow-600 ring-bottom hover:border-yellow-700"
             >
               {service.name}
             </a>
@@ -121,7 +121,7 @@ export default function Footer() {
           <a
             href="https://www.linkedin.com/in/jesuspiscoya/"
             target="_blank"
-            className="text-red-700 hover:text-yellow-700 transition-colors duration-500"
+            className="text-red-700 hover:text-yellow-700 duration-500"
           >
             <strong>Jesus Piscoya</strong>
           </a>
@@ -130,7 +130,7 @@ export default function Footer() {
       <a
         href="https://api.whatsapp.com/send?phone=51948911431&text=Hola!%F0%9F%91%8B%20Necesito%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios."
         target="_blank"
-        className="fixed bottom-5 right-5 md:bottom-10 md:right-11 bg-gradient-to-t from-green-800 to-green-500 p-1 rounded-lg shadow-lg shadow-black/60 transition-all duration-500"
+        className="fixed bottom-5 right-5 md:bottom-10 md:right-11 bg-gradient-to-t from-green-800 to-green-500 p-1 rounded-lg shadow-lg shadow-black/70"
       >
         <div className="relative h-9 w-9">
           <Image

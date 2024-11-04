@@ -49,7 +49,7 @@ export default function ScrollAnimation({
   return (
     <div
       ref={ref}
-      className={`transform transition-all duration-1000 ${
+      className={`transform duration-1000 ${
         isVisible ? "opacity-100 translate-x-0" : `opacity-0 ${direction}`
       } ${className}`}
       style={{ transitionDelay: `${delay}ms` }}

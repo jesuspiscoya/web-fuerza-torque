@@ -61,7 +61,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 right-0 left-0 text-lg text-white px-7 md:px-16 py-4 z-50 transition-colors duration-500 ${
+      className={`fixed top-0 right-0 left-0 text-lg text-white px-7 md:px-16 py-4 z-50 duration-500 ${
         isScrolled ? "bg-blue-gray-700" : "bg-transparent"
       }`}
     >
@@ -69,10 +69,10 @@ export default function Navbar() {
       <div className="flex md:hidden justify-between items-center">
         <Link href="/">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="Logo Company"
-            width={1000}
-            height={1000}
+            width={200}
+            height={200}
             className="w-24"
           />
         </Link>
@@ -85,7 +85,7 @@ export default function Navbar() {
         </button>
         <div
           ref={menuRef}
-          className={`flex flex-col absolute top-[3.9rem] left-0 right-0 bg-blue-gray-800 text-base transition-all duration-200 ease-in-out ${
+          className={`flex flex-col absolute top-[3.9rem] left-0 right-0 bg-blue-gray-800 text-base duration-200 ease-in-out ${
             isOpen
               ? "max-h-64 opacity-100"
               : "max-h-0 opacity-100 overflow-hidden"
@@ -95,14 +95,14 @@ export default function Navbar() {
             <Link
               key={index}
               href={item.link}
-              className="font-medium hover:text-red-500 hover:bg-blue-gray-700 transition duration-200 px-8 py-3"
+              className="font-medium hover:text-red-500 hover:bg-blue-gray-700 duration-500 px-8 py-3"
             >
               {item.name}
             </Link>
           ))}
           <Link
             href="/contacto"
-            className="font-medium hover:text-red-500 hover:bg-blue-gray-700 transition duration-200 px-8 py-3"
+            className="font-medium hover:text-red-500 hover:bg-blue-gray-700 duration-500 px-8 py-3"
           >
             Contacto
           </Link>
@@ -112,11 +112,11 @@ export default function Navbar() {
       <div className="container hidden md:flex justify-between items-center">
         <Link href="/">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="Logo Company"
             className="w-28"
-            width={1000}
-            height={1000}
+            width={200}
+            height={200}
           />
         </Link>
         <ul className="flex gap-10">
@@ -124,7 +124,7 @@ export default function Navbar() {
             <li key={index}>
               <Link
                 href={item.link}
-                className="font-semibold hover:text-red-500 transition duration-200"
+                className="font-semibold hover:text-red-500 duration-200"
               >
                 {item.name}
               </Link>
@@ -134,7 +134,7 @@ export default function Navbar() {
         <Link
           href="/contacto"
           style={{ boxShadow: "0 3px 0 0 white" }}
-          className="btn-contact bg-yellow-700 border-2 hover:bg-yellow-800 border-black rounded-full px-6 py-2 text-black font-medium transition duration-500 hover:text-white"
+          className="btn-contact bg-yellow-700 border-2 hover:bg-yellow-800 border-black rounded-full px-6 py-2 text-black font-medium duration-500 hover:text-white"
         >
           Contacto
         </Link>
