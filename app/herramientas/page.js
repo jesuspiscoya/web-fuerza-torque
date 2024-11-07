@@ -74,15 +74,15 @@ export default function Tools() {
             Galería
           </h1>
           <div className="grid md:grid-cols-3 gap-5">
-            {[...images, ...images].map((item, index) => (
+            {[...images, ...images].map(({ img }, key) => (
               <ScrollAnimation
-                key={index}
+                key={key}
                 to="bottom"
                 className="relative"
-                delay={index * 100}
+                delay={key * 100}
               >
                 <Image
-                  src={item.img}
+                  src={img}
                   alt="Herramientas"
                   width={1000}
                   height={1000}

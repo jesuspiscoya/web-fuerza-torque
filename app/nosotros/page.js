@@ -116,8 +116,8 @@ export default function AboutUs() {
               </p>
             </ScrollAnimation>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start md:gap-7">
-              {tools.map((tool, index) => (
-                <ScrollAnimation key={index} to="left">
+              {tools.map((tool, key) => (
+                <ScrollAnimation key={key} to="left">
                   <div className="flex items-center">
                     <i
                       className="fa-solid fa-wrench fa-beat mr-4 text-yellow-700"
@@ -185,16 +185,16 @@ export default function AboutUs() {
                       </h1>
                       {Array.isArray(desc) ? (
                         <div className="grid md:grid-cols-5 gap-8 mt-10">
-                          {desc.map((item, index) => (
+                          {desc.map(({ icon, desc }, key) => (
                             <div
-                              key={index}
+                              key={key}
                               className={`p-5 bg-blue-gray-600 hover:bg-yellow-600/55 text-xl rounded-md flex flex-col gap-4 justify-center text-center font-bold cursor-default duration-500 ${rubik.className}`}
                             >
                               <i
-                                className={`${item.icon} text-3xl`}
+                                className={`${icon} text-3xl`}
                                 aria-hidden="true"
                               ></i>
-                              {item.desc}
+                              {desc}
                             </div>
                           ))}
                         </div>

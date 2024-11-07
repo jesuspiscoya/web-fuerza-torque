@@ -80,14 +80,14 @@ export default function Contact() {
             Información de contacto
           </span>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {contact.map((item, index) => (
+            {contact.map(({ icon, text }, key) => (
               <div
-                key={index}
+                key={key}
                 className="flex flex-col justify-center text-center rounded-md gap-3 bg-gray-300 px-6 py-10 hover:scale-[1.01] hover:-translate-y-2 shadow-lg shadow-black hover:shadow-yellow-500/60 duration-500 cursor-default"
               >
                 <div>
                   <i
-                    className={`${item.icon} text-yellow-800 fa-xl`}
+                    className={`${icon} text-yellow-800 fa-xl`}
                     aria-hidden="true"
                   ></i>
                   <hr className="mt-3 mx-auto border-red-500 w-20" />
@@ -95,7 +95,7 @@ export default function Contact() {
                 <span
                   className={`break-words font-medium text-blue-gray-800 ${rubik.className}`}
                 >
-                  {item.text}
+                  {text}
                 </span>
               </div>
             ))}

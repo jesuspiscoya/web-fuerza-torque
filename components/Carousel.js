@@ -8,17 +8,17 @@ export default function Carousel({ elements, rigth = false }) {
           !rigth ? "carousel-left" : "carousel-right"
         }`}
       >
-        {[...elements, ...elements].map((element, index) =>
-          Boolean(element.url) ? (
+        {[...elements, ...elements].map(({ url, img, title }, key) =>
+          Boolean(url) ? (
             <a
-              href={element.url}
+              href={url}
               target="_blank"
-              key={index}
+              key={key}
               className="rounded-lg bg-white/40 shadow-lg shadow-blue-gray-800 h-24 w-44 p-4 mr-6 md:h-32 md:w-60 md:py-5 md:px-6 md:mr-12 flex cursor-pointer"
             >
               <Image
-                src={element.img}
-                alt={element.title}
+                src={img}
+                alt={title}
                 width={500}
                 height={500}
                 className="object-contain"
@@ -26,12 +26,12 @@ export default function Carousel({ elements, rigth = false }) {
             </a>
           ) : (
             <a
-              key={index}
+              key={key}
               className="rounded-lg bg-white/40 shadow-lg shadow-blue-gray-800 h-24 w-44 p-4 mr-6 md:h-32 md:w-60 md:py-5 md:px-6 md:mr-12 flex cursor-pointer"
             >
               <Image
-                src={element.img}
-                alt={element.title}
+                src={img}
+                alt={title}
                 width={500}
                 height={500}
                 className="object-contain"

@@ -3,14 +3,11 @@ import Image from "next/image";
 export default function Footer() {
   const socialNetworks = [
     {
-      name: "Facebook",
       icon: "fa-facebook",
       color: "text-blue-400",
       url: "https://www.facebook.com/fuerzaytorquecompany",
     },
-    { name: "YouTube", icon: "fa-youtube", color: "text-red-500", url: "#" },
     {
-      name: "WhatsApp",
       icon: "fa-whatsapp",
       color: "text-[#3ae44b]",
       url: "https://api.whatsapp.com/send?phone=51948911431&text=Hola!%F0%9F%91%8B%20Necesito%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios.",
@@ -51,15 +48,15 @@ export default function Footer() {
             className="h-16 w-auto md:h-20 my-auto object-cover"
           />
           <div className="flex gap-7">
-            {socialNetworks.map((network, index) => (
+            {socialNetworks.map(({ icon, color, url }, key) => (
               <a
-                key={index}
-                href={network.url}
+                key={key}
+                href={url}
                 target="_blank"
-                className={`font-medium duration-500 hover:${network.color}`}
+                className={`font-medium duration-500 hover:${color}`}
               >
                 <i
-                  className={`fa-brands ${network.icon} fa-2xl`}
+                  className={`fa-brands ${icon} fa-2xl`}
                   aria-hidden="true"
                 ></i>
               </a>
@@ -70,13 +67,13 @@ export default function Footer() {
           <h1 className="text-lg font-semibold text-red-700 cursor-default">
             Productos
           </h1>
-          {products.map((product, index) => (
+          {products.map(({ name, url }, key) => (
             <a
-              key={index}
-              href={product.url}
+              key={key}
+              href={url}
               className="text-sm duration-500 pb-1 hover:text-yellow-600 ring-bottom"
             >
-              {product.name}
+              {name}
             </a>
           ))}
         </div>
@@ -84,25 +81,22 @@ export default function Footer() {
           <h1 className="text-lg font-semibold text-red-700 cursor-default">
             Servicios
           </h1>
-          {services.map((service, index) => (
+          {services.map(({ name, url }, key) => (
             <a
-              key={index}
-              href={service.url}
+              key={key}
+              href={url}
               className="text-sm duration-500 pb-1 hover:text-yellow-600 ring-bottom hover:border-yellow-700"
             >
-              {service.name}
+              {name}
             </a>
           ))}
         </div>
         <div className="flex flex-col md:items-end gap-6 md:max-w-56 cursor-default">
           <h1 className="text-lg font-semibold text-red-700">Contáctanos</h1>
-          {contact.map((item, index) => (
-            <div key={index} className="md:text-end">
-              <i
-                className={`fa-solid ${item.icon} me-2`}
-                aria-hidden="true"
-              ></i>
-              <span className="text-[0.85rem] md:text-sm">{item.name}</span>
+          {contact.map(({ name, icon }, key) => (
+            <div key={key} className="md:text-end">
+              <i className={`fa-solid ${icon} me-2`} aria-hidden="true"></i>
+              <span className="text-[0.85rem] md:text-sm">{name}</span>
             </div>
           ))}
         </div>

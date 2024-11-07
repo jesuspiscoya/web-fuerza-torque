@@ -166,7 +166,7 @@ export default function NavBar() {
         () => window.innerWidth >= 960 && setOpenNav(false)
       );
     };
-  }, [isScrolled, openNav]);
+  }, []);
 
   return (
     <Navbar

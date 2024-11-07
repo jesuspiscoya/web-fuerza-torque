@@ -74,8 +74,8 @@ export default function page() {
           </ScrollAnimation>
         </div>
       </div>
-      {services.map((item, index) => (
-        <Content key={index} element={item} />
+      {services.map((item, key) => (
+        <Content key={key} element={item} />
       ))}
       <div className="p-7 md:p-16 bg-gradient-to-t to-black from-blue-gray-900">
         <div className="container flex flex-col items-center gap-10 md:gap-20">
@@ -109,21 +109,22 @@ export default function page() {
             </span>
           </ScrollAnimation>
           <div className="flex flex-wrap gap-7 justify-center w-full">
-            {sector.map((item, index) => (
+            {sector.map(({ title, img }, key) => (
               <ScrollAnimation
+                key={key}
                 to={"bottom"}
-                delay={index * 100}
+                delay={key * 100}
                 className="relative h-60 w-full md:w-[31.71%] overflow-hidden bg-black/70 cursor-default rounded-lg shadow-lg shadow-black/80 duration-500 hover:scale-[1.01] hover:-translate-y-1.5"
               >
                 <Image
-                  src={item.img}
+                  src={img}
                   alt="Mantenimiento"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute flex top-0 bottom-0 left-0 right-0 opacity-0 duration-500 bg-black/70 p-7 hover:opacity-100">
                   <span className="text-3xl font-semibold text-yellow-700 text-center m-auto">
-                    {item.title}
+                    {title}
                   </span>
                 </div>
               </ScrollAnimation>
@@ -142,15 +143,15 @@ export default function page() {
             <div className="h-0.5 bg-red-600 w-16 mt-1 mb-5 mx-auto" />
           </ScrollAnimation>
           <div className="grid md:grid-cols-3 gap-5">
-            {[...images, ...images].map((item, index) => (
+            {[...images, ...images].map(({ img }, key) => (
               <ScrollAnimation
-                key={index}
+                key={key}
                 to="bottom"
                 className="relative"
-                delay={index * 100}
+                delay={key * 100}
               >
                 <Image
-                  src={item.img}
+                  src={img}
                   alt="Mantenimiento"
                   width={1000}
                   height={1000}

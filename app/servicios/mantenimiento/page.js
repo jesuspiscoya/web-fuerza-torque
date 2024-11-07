@@ -61,8 +61,8 @@ export default function page() {
           </ScrollAnimation>
         </div>
       </div>
-      {maintenances.map((item, index) => (
-        <Content key={index} element={item} />
+      {maintenances.map((item, key) => (
+        <Content key={key} element={item} />
       ))}
       <div className="p-7 md:p-16 bg-blue-gray-900">
         <div className="container text-center flex flex-col gap-8 md:gap-10">
@@ -75,15 +75,15 @@ export default function page() {
             <div className="h-0.5 bg-red-600 w-16 mt-1 mb-5 mx-auto" />
           </ScrollAnimation>
           <div className="grid md:grid-cols-3 gap-5">
-            {[...images, ...images].map((item, index) => (
+            {[...images, ...images].map(({ img }, key) => (
               <ScrollAnimation
-                key={index}
+                key={key}
                 to="bottom"
                 className="relative"
-                delay={index * 100}
+                delay={key * 100}
               >
                 <Image
-                  src={item.img}
+                  src={img}
                   alt="Mantenimiento"
                   width={1000}
                   height={1000}

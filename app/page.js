@@ -117,15 +117,15 @@ export default function Home() {
           </h1>
         </ScrollAnimation>
         <div className="flex flex-col justify-center md:flex-row gap-7 md:gap-10">
-          {services.map((service, index) => (
+          {services.map(({ title, description, image, url }, key) => (
             <ScrollAnimation
               to="bottom"
-              key={index}
+              key={key}
               className="relative w-full rounded-lg overflow-hidden cursor-default duration-500 shadow-lg shadow-black/70 hover:scale-[1.02] hover:-translate-y-1.5"
             >
               <Image
-                src={service.image}
-                alt={service.title}
+                src={image}
+                alt={title}
                 width={1000}
                 height={1000}
                 className="object-cover w-full h-80"
@@ -134,11 +134,11 @@ export default function Home() {
                 <h1
                   className={`text-red-700 font-bold text-2xl ${rubik.className}`}
                 >
-                  {service.title}
+                  {title}
                 </h1>
-                <p className="text-gray-400 text-sm">{service.description}</p>
+                <p className="text-gray-400 text-sm">{description}</p>
                 <Link
-                  href={service.url}
+                  href={url}
                   className="text-white hover:text-yellow-700 font-semibold duration-500 px-3 py-1 rounded-lg"
                 >
                   Ver más

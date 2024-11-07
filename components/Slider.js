@@ -61,13 +61,13 @@ export default function Slider({ pharagraph, height }) {
         className="duration-500 flex cursor-default"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
-        {pharagraph.map((item, index) => (
+        {pharagraph.map(({ img, title, description }, key) => (
           <div
-            key={index}
+            key={key}
             className={`relative ${height} w-full flex-shrink-0 bg-cover bg-center`}
-            style={{ backgroundImage: `url(${item.img})` }}
+            style={{ backgroundImage: `url(${img})` }}
           >
-            {item.title ? (
+            {title ? (
               <div className="absolute grid h-full w-full place-items-center bg-black/75">
                 <div className="w-3/4 text-center md:w-2/4 text-gray-300 flex flex-col gap-12">
                   <h1
@@ -79,7 +79,7 @@ export default function Slider({ pharagraph, height }) {
                         : "opacity-0 -translate-y-20"
                     }`}
                   >
-                    {item.title}
+                    {title}
                   </h1>
                   <p
                     className={`text-base md:text-xl font-medium duration-1000 ${
@@ -88,7 +88,7 @@ export default function Slider({ pharagraph, height }) {
                         : "opacity-0 -translate-x-20"
                     }`}
                   >
-                    {item.description}
+                    {description}
                   </p>
                 </div>
               </div>
