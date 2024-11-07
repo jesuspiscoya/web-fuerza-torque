@@ -136,7 +136,7 @@ export default function Home() {
                 >
                   {title}
                 </h1>
-                <p className="text-gray-400 text-sm">{description}</p>
+                <p className="text-gray-400">{description}</p>
                 <Link
                   href={url}
                   className="text-white hover:text-yellow-700 font-semibold duration-500 px-3 py-1 rounded-lg"

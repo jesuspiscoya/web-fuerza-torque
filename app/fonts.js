@@ -5,6 +5,7 @@ export const poppins = Poppins({
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
+  preload: true,
 });
 
 export const rubik = Rubik({
@@ -12,6 +13,7 @@ export const rubik = Rubik({
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
+  preload: true,
 });
 
 export const lilita_one = Lilita_One({
@@ -19,6 +21,7 @@ export const lilita_one = Lilita_One({
   style: ["normal"],
   subsets: ["latin"],
   display: "swap",
+  preload: true,
 });
 
 export const caveat = Caveat({
@@ -26,4 +29,5 @@ export const caveat = Caveat({
   style: ["normal"],
   subsets: ["latin"],
   display: "swap",
+  preload: true,
 });

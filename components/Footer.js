@@ -7,6 +7,7 @@ export default function Footer() {
       color: "text-blue-400",
       url: "https://www.facebook.com/fuerzaytorquecompany",
     },
+    { icon: "fa-youtube", color: "text-red-500", url: "#" },
     {
       icon: "fa-whatsapp",
       color: "text-[#3ae44b]",
@@ -124,7 +125,7 @@ export default function Footer() {
       <a
         href="https://api.whatsapp.com/send?phone=51948911431&text=Hola!%F0%9F%91%8B%20Necesito%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios."
         target="_blank"
-        className="fixed bottom-5 right-5 md:bottom-10 md:right-11 bg-gradient-to-t from-green-800 to-green-500 p-1 rounded-lg shadow-lg shadow-black/70"
+        className="fixed bottom-5 right-5 md:bottom-8 md:right-9 bg-gradient-to-t from-green-800 to-green-500 p-1 rounded-lg shadow-lg shadow-black/70"
       >
         <div className="relative h-9 w-9">
           <Image

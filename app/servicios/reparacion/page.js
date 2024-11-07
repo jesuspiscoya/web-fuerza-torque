@@ -90,7 +90,7 @@ export default function page() {
               >
                 <Image
                   src={img}
-                  alt="Mantenimiento"
+                  alt="Galería de servicios"
                   width={1000}
                   height={1000}
                   className="h-48 w-full md:h-80 object-cover"

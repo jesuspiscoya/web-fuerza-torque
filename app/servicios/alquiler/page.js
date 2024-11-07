@@ -118,11 +118,11 @@ export default function page() {
               >
                 <Image
                   src={img}
-                  alt="Mantenimiento"
+                  alt={title}
                   fill
                   className="object-cover"
                 />
-                <div className="absolute flex top-0 bottom-0 left-0 right-0 opacity-0 duration-500 bg-black/70 p-7 hover:opacity-100">
+                <div className="absolute flex top-0 bottom-0 left-0 right-0 opacity-0 duration-500 bg-black/70 p-10 hover:opacity-100">
                   <span className="text-3xl font-semibold text-yellow-700 text-center m-auto">
                     {title}
                   </span>
@@ -152,7 +152,7 @@ export default function page() {
               >
                 <Image
                   src={img}
-                  alt="Mantenimiento"
+                  alt="Galería de servicios"
                   width={1000}
                   height={1000}
                   className="h-48 w-full md:h-80 object-cover"

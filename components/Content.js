@@ -15,7 +15,7 @@ export default function Content({ element }) {
             <span
               className={`md:text-lg font-bold text-red-700 ${rubik.className}`}
             >
-              Servicio
+              {element.title}
             </span>
           </ScrollAnimation>
           <ScrollAnimation
@@ -25,7 +25,7 @@ export default function Content({ element }) {
             <h1
               className={`text-3xl md:text-4xl font-bold text-yellow-700 ${rubik.className}`}
             >
-              {element.title}
+              {element.subtitle}
             </h1>
           </ScrollAnimation>
           <ScrollAnimation

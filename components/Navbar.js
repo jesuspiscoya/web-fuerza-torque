@@ -17,30 +17,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 
-const navListMenuItems = [
-  {
-    subtitle: "Alquiler",
-    url: "/servicios/alquiler",
-  },
-  {
-    subtitle: "Reparación",
-    url: "/servicios/reparacion",
-  },
-  {
-    subtitle: "Mantenimiento",
-    url: "/servicios/mantenimiento",
-  },
-];
-
-function NavListMenu({ title }) {
+function NavListMenu({ title, menu }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const renderItems = navListMenuItems.map(({ subtitle, url }, key) => (
+  const renderItems = menu.map(({ subtitle, url }, key) => (
     <a href={url} key={key}>
       <MenuItem className="w-[calc(100%-1.25rem)] text-white rounded-lg ml-5 lg:m-0 lg:w-full hover:bg-white/20 hover:text-yellow-700">
         <Typography
           variant="small"
-          className={`font-medium ${rubik.className}`}
+          style={{ fontFamily: rubik.style.fontFamily }}
+          className="font-medium"
         >
           {subtitle}
         </Typography>
@@ -60,7 +46,8 @@ function NavListMenu({ title }) {
         <MenuHandler>
           <Typography
             as="div"
-            className={`text-sm lg:text-base font-medium ${rubik.className}`}
+            style={{ fontFamily: rubik.style.fontFamily }}
+            className="text-sm lg:text-base font-medium"
           >
             <ListItem
               className={`gap-2 px-4 py-3 lg:py-2 text-gray-300 duration-300 hover:bg-white/20 hover:text-red-500 focus:bg-white/45 focus:text-white active:bg-white/45 active:text-white`}
@@ -117,18 +104,57 @@ function NavList() {
       url: "/contacto",
     },
   ];
+  const menuServices = [
+    {
+      subtitle: "Alquiler",
+      url: "/servicios/alquiler",
+    },
+    {
+      subtitle: "Reparación",
+      url: "/servicios/reparacion",
+    },
+    {
+      subtitle: "Mantenimiento",
+      url: "/servicios/mantenimiento",
+    },
+  ];
+  const menuTools = [
+    {
+      subtitle: "Herramientas de Torque",
+      url: "/herramientas/herramientas-torque",
+    },
+    {
+      subtitle: "Bombas Hidráulicas",
+      url: "/herramientas/bombas-hidraulicas",
+    },
+    {
+      subtitle: "Llaves de Impacto",
+      url: "/herramientas/llaves-impacto",
+    },
+    {
+      subtitle: "Remachadoras Hidráulicas",
+      url: "/herramientas/remachadoras-hidraulicas",
+    },
+    {
+      subtitle: "Otras herramientas",
+      url: "/herramientas/otras-herramientas",
+    },
+  ];
 
   return (
     <List className="mt-3 p-0 pt-2 border-t-[1px] border-gray-400 lg:gap-3 lg:border-0 lg:p-0 lg:mt-0 lg:flex-row">
       {items.map(({ title, url }, key) =>
         title === "Servicios" ? (
-          <NavListMenu key={key} title={title} />
+          <NavListMenu key={key} title={title} menu={menuServices} />
+        ) : title === "Herramientas" ? (
+          <NavListMenu key={key} title={title} menu={menuTools} />
         ) : (
           <Typography
             key={key}
             as="a"
             href={url}
-            className={`text-sm lg:text-base font-medium ${rubik.className} ${
+            style={{ fontFamily: rubik.style.fontFamily }}
+            className={`text-sm lg:text-base font-medium ${
               title === "Contacto" ? "lg:hidden" : ""
             }`}
           >
@@ -148,12 +174,11 @@ export default function NavBar() {
 
   const handleScroll = () => {
     setIsScrolled(window.scrollY > 50);
+    setOpenNav(false);
   };
 
   useEffect(() => {
-    // Agrega un listener para el scroll
     window.addEventListener("scroll", handleScroll);
-
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
@@ -197,13 +222,17 @@ export default function NavBar() {
         <div className="hidden lg:block">
           <NavList />
         </div>
-        <Link
+        <Typography
+          as="a"
           href="/contacto"
-          style={{ boxShadow: "0 3px 0 0 white" }}
+          style={{
+            boxShadow: "0 4px 0 -2px white",
+            fontFamily: rubik.style.fontFamily,
+          }}
           className="hidden lg:block btn-contact bg-yellow-700 border-2 hover:bg-yellow-800 border-black rounded-full px-6 py-2 text-black font-medium duration-500 hover:text-white"
         >
           Contacto
-        </Link>
+        </Typography>
         <IconButton
           variant="text"
           color="white"
