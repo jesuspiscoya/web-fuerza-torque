@@ -22,9 +22,9 @@ export default function Footer() {
     { name: "Herramientas eléctricas", url: "/herramientas" },
   ];
   const services = [
-    { name: "Mantenimiento", url: "/servicios" },
-    { name: "Reparación", url: "/servicios" },
-    { name: "Alquiler", url: "/servicios" },
+    { name: "Alquiler", url: "/servicios/alquiler" },
+    { name: "Reparación", url: "/servicios/reparacion" },
+    { name: "Mantenimiento", url: "/servicios/mantenimiento" },
   ];
   const contact = [
     { name: "+51 948 911 431", icon: "fa-phone" },

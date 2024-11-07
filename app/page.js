@@ -1,6 +1,6 @@
 import Carousel from "@/components/Carousel";
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import NavBar from "@/components/Navbar";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import Slider from "@/components/Slider";
 import Image from "next/image";
@@ -36,6 +36,13 @@ export default function Home() {
   ];
   const services = [
     {
+      title: "Alquiler",
+      description:
+        "Alquilamos herramientas y equipos de alta calidad de marcas reconocidas.",
+      image: "/images/herramientas3.webp",
+      url: "/servicios",
+    },
+    {
       title: "Mantenimiento",
       description:
         "Realizamos mantenimientos profesionales de tipo preventivo, correctivo y predictivo",
@@ -48,20 +55,51 @@ export default function Home() {
       image: "/images/industrias2.jpg",
       url: "/servicios",
     },
+  ];
+  const brands = [
+    { title: "Tarjeta 1", img: "/images/marca1.webp" },
+    { title: "Tarjeta 2", img: "/images/marca2.webp" },
+    { title: "Tarjeta 3", img: "/images/marca3.webp" },
+    { title: "Tarjeta 4", img: "/images/marca4.webp" },
+  ];
+  const companys = [
     {
-      title: "Alquiler",
-      description:
-        "Alquilamos herramientas y equipos de alta calidad de marcas reconocidas.",
-      image: "/images/herramientas3.webp",
-      url: "/servicios",
+      title: "Tarjeta 1",
+      img: "/images/company1.webp",
+      url: "https://eserminglobal.com/",
+    },
+    {
+      title: "Tarjeta 2",
+      img: "/images/company2.webp",
+      url: "https://www.metso.com/",
+    },
+    {
+      title: "Tarjeta 3",
+      img: "/images/company3.webp",
+      url: "https://www.chinalco.com.pe/",
+    },
+    {
+      title: "Tarjeta 4",
+      img: "/images/company4.webp",
+      url: "https://macomperu.com/",
+    },
+    {
+      title: "Tarjeta 4",
+      img: "/images/company5.webp",
+      url: "https://www.energ.uy/",
+    },
+    {
+      title: "Tarjeta 4",
+      img: "/images/company6.webp",
+      url: "https://hmconsultingsac.net/",
     },
   ];
   const year = new Date().getFullYear();
 
   return (
     <>
+      <NavBar />
       <Slider pharagraph={slider} height={"h-screen"} />
-      <Navbar />
       <div className="bg-gradient-to-t to-gray-900 from-blue-gray-900 text-center p-7 md:p-16">
         <ScrollAnimation to="top">
           <span
@@ -83,29 +121,28 @@ export default function Home() {
             <ScrollAnimation
               to="bottom"
               key={index}
-              className="w-full cursor-default"
-              delay={index * 100 + 300}
+              className="relative w-full rounded-lg overflow-hidden cursor-default duration-500 shadow-lg shadow-black/70 hover:scale-[1.02] hover:-translate-y-1.5"
             >
-              <div className="relative overflow-hidden duration-500 hover:scale-[1.02] hover:-translate-y-2">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={1000}
-                  height={1000}
-                  className="object-cover w-full h-80"
-                />
-                <div className="absolute opacity-0 pt-52 hover:pt-10 hover:opacity-100 flex flex-col gap-5 bg-black/80 top-0 bottom-0 left-0 right-0 justify-center text-center duration-500 p-10 text-sm">
-                  <h1 className="text-red-700 font-semibold text-xl">
-                    {service.title}
-                  </h1>
-                  <p className="text-gray-400">{service.description}</p>
-                  <Link
-                    href={service.url}
-                    className="text-white hover:text-yellow-700 font-semibold duration-500 px-3 py-1 rounded-lg"
-                  >
-                    Ver más
-                  </Link>
-                </div>
+              <Image
+                src={service.image}
+                alt={service.title}
+                width={1000}
+                height={1000}
+                className="object-cover w-full h-80"
+              />
+              <div className="absolute opacity-0 pt-52 hover:pt-10 hover:opacity-100 flex flex-col gap-5 bg-black/80 top-0 bottom-0 left-0 right-0 justify-center text-center duration-500 p-10 text-sm">
+                <h1
+                  className={`text-red-700 font-bold text-2xl ${rubik.className}`}
+                >
+                  {service.title}
+                </h1>
+                <p className="text-gray-400 text-sm">{service.description}</p>
+                <Link
+                  href={service.url}
+                  className="text-white hover:text-yellow-700 font-semibold duration-500 px-3 py-1 rounded-lg"
+                >
+                  Ver más
+                </Link>
               </div>
             </ScrollAnimation>
           ))}
@@ -130,9 +167,9 @@ export default function Home() {
               className="w-full text-center p-8 md:px-14 flex flex-col justify-center md:bg-black/80 rounded-3xl md:ring-1 md:shadow-2xl md:shadow-black cursor-default"
             >
               <h1 className="hidden md:block text-xl md:text-2xl font-bold text-yellow-700">
-                SOLUCIONES
+                SERVICIOS DE CALIDAD
               </h1>
-              <div className="hidden md:block h-0.5 bg-red-600 w-28 mx-auto mt-1 mb-5"></div>
+              <div className="hidden md:block h-0.5 bg-red-600 w-48 mx-auto mt-1 mb-5" />
               <p className="text-gray-300 text-sm">
                 <strong>FUERZA Y TOQUE COMPANY</strong> se destaca como un líder
                 en el mercado, brindando herramientas y servicios especializados
@@ -180,17 +217,32 @@ export default function Home() {
           className="absolute bg-center bg-no-repeat bg-cover w-full top-14 bottom-14 md:top-28 md:bottom-28"
           style={{ backgroundImage: `url('/images/bg-marcas.webp')` }}
         />
-        <div className="relative h-full bg-black/80 text-yellow-50 w-full py-20 md:py-24">
-          <div className="container flex flex-col gap-7">
+        <div className="relative flex flex-col gap-20 h-full bg-black/80 text-yellow-50 w-full py-20 md:py-24">
+          <div className="container flex flex-col gap-6">
             <ScrollAnimation to="right">
               <div className="flex flex-col items-center text-center md:items-start">
                 <h1 className="text-xl md:text-2xl font-bold text-yellow-700">
-                  NUESTRAS MARCAS
+                  MARCAS DE ALQUILER
                 </h1>
-                <div className="h-0.5 bg-red-600 w-40 md:w-52 mt-1 mb-5"></div>
+                <div className="h-0.5 bg-red-600 w-40 md:w-52 mt-1 mb-5" />
               </div>
             </ScrollAnimation>
-            <Carousel />
+            <ScrollAnimation to="bottom">
+              <Carousel elements={brands} />
+            </ScrollAnimation>
+          </div>
+          <div className="container flex flex-col gap-6">
+            <ScrollAnimation to="right" delay={200}>
+              <div className="flex flex-col items-center text-center md:items-start">
+                <h1 className="text-xl md:text-2xl font-bold text-yellow-700">
+                  NUESTROS CLIENTES
+                </h1>
+                <div className="h-0.5 bg-red-600 w-40 md:w-52 mt-1 mb-5" />
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation to="bottom" delay={200}>
+              <Carousel elements={companys} rigth={true} />
+            </ScrollAnimation>
           </div>
         </div>
       </div>

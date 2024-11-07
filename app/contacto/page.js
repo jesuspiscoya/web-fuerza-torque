@@ -1,7 +1,7 @@
 "use client";
 
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import NavBar from "@/components/Navbar";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import Form from "@/components/Form";
 import Image from "next/image";
@@ -25,7 +25,7 @@ export default function Contact() {
 
   return (
     <>
-      <Navbar />
+      <NavBar />
       <div
         className="h-80 md:h-[25rem] bg-no-repeat bg-cover bg-center"
         style={{ backgroundImage: `url('/images/bg-contacto.webp')` }}
@@ -56,7 +56,7 @@ export default function Contact() {
               alt="Logo"
               width={200}
               height={200}
-              className="absolute bottom-4 right-4 rounded-md bg-white/65 object-cover w-24 p-2"
+              className="absolute bottom-4 right-4 rounded-md bg-white/65 object-cover w-24 p-1.5"
             />
           </div>
           <div className="flex flex-col gap-8 w-full text-center md:text-start">
@@ -83,7 +83,7 @@ export default function Contact() {
             {contact.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col justify-center text-center rounded-md gap-3 bg-gray-300 px-6 py-10 hover:scale-[1.02] hover:-translate-y-2 shadow-lg shadow-black hover:shadow-yellow-500/60 duration-500 cursor-default"
+                className="flex flex-col justify-center text-center rounded-md gap-3 bg-gray-300 px-6 py-10 hover:scale-[1.01] hover:-translate-y-2 shadow-lg shadow-black hover:shadow-yellow-500/60 duration-500 cursor-default"
               >
                 <div>
                   <i

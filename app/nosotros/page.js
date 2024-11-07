@@ -1,7 +1,7 @@
 "use client";
 
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import NavBar from "@/components/Navbar";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import {
   Tab,
@@ -26,13 +26,13 @@ export default function AboutUs() {
       label: "Misión",
       value: "mision",
       icon: "fa-solid fa-award",
-      desc: "Nuestra misión es proveer bienes de capital, repuestos servicio de reparación y mantenimiento de la más alta calidad al mejor costo, manteniendo un alto nivel de profesionalismo y eficiencia en nuestra gestión, respaldados en un equipo humano altamente motivado, capacitado e identificado con nuestras metas.",
+      desc: "Ofrecer soluciones rentables y de alto rendimiento para las necesidades industriales de nuestros clientes. A través del alquiler, reparación y mantenimiento de equipos especializados, buscamos optimizar costos operativos y maximizar la productividad de nuestros clientes, proporcionándoles herramientas confiables y un servicio técnico profesional.",
     },
     {
       label: "Visión",
       value: "vision",
       icon: "fa-solid fa-ranking-star",
-      desc: "Buscamos convertirnos en el proveedor de bienes de capital, repuestos y servicios predilectos del mercado. Visualizamos a los clientes como nuestros socios, por lo que trabajamos con ellos de una manera ética y transparente. Seremos reconocidos por el liderazgo obtenido a través de nuestra capacidad de solucionar, integra y eficientemente las diversas necesidades de nuestros clientes.",
+      desc: "Ser reconocidos como el principal proveedor de soluciones integrales para el alquiler y mantenimiento de equipos industriales en Perú y América Latina, destacándonos por nuestra capacidad de adaptarnos a las necesidades de cada cliente y por nuestra excelencia operativa.",
     },
     {
       label: "Valores",
@@ -60,7 +60,7 @@ export default function AboutUs() {
 
   return (
     <>
-      <Navbar />
+      <NavBar />
       <div
         className="h-screen md:h-screen bg-no-repeat bg-cover"
         style={{ backgroundImage: `url('/images/bg-nosotros.webp')` }}

@@ -14,7 +14,7 @@ export default function ScrollAnimation({
 
   const handleScroll = () => {
     const rect = ref.current.getBoundingClientRect();
-    const position = window.innerHeight - 80;
+    const position = window.innerHeight - 100;
 
     if (rect.top > position && rect.bottom > 0) {
       setIsVisible(false);
@@ -36,7 +36,7 @@ export default function ScrollAnimation({
       direction = "-translate-x-20";
       break;
     case "right":
-      direction = "translate-x-20";
+      direction = "-translate-x-20 md:translate-x-20";
       break;
     case "top":
       direction = "-translate-y-20";

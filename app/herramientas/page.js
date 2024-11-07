@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import NavBar from "@/components/Navbar";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import Slider from "@/components/Slider";
 import Image from "next/image";
@@ -15,7 +15,7 @@ export default function Tools() {
 
   return (
     <>
-      <Navbar />
+      <NavBar />
       <div
         className="h-80 md:h-[25rem] bg-no-repeat bg-cover bg-bottom"
         style={{ backgroundImage: `url('/images/herramientas.webp')` }}
@@ -48,7 +48,7 @@ export default function Tools() {
               </h1>
             </ScrollAnimation>
             <ScrollAnimation to="left" delay={600}>
-              <p className="text-sm md:text-md text-gray-300">
+              <p className="text-sm text-gray-300">
                 Ofrecemos una amplia gama de herramientas neumáticas de alta
                 calidad, ideales para profesionales y aficionados del bricolaje
                 que buscan eficiencia y precisión en sus trabajos. Nuestras
@@ -88,7 +88,7 @@ export default function Tools() {
                   height={1000}
                   className="h-48 w-full md:h-80 object-cover"
                 />
-                <div className="absolute hover:bg-black/50 duration-[600ms] top-0 bottom-0 left-0 right-0 cursor-pointer"></div>
+                <div className="absolute hover:bg-black/50 duration-[600ms] top-0 bottom-0 left-0 right-0 cursor-pointer" />
               </ScrollAnimation>
             ))}
           </div>

@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import NavBar from "@/components/Navbar";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import Slider from "@/components/Slider";
 import Image from "next/image";
@@ -15,7 +15,7 @@ export default function Maintenance() {
 
   return (
     <>
-      <Navbar />
+      <NavBar />
       <div
         className="h-80 md:h-[25rem] bg-no-repeat bg-cover"
         style={{ backgroundImage: `url('/images/mantenimiento.webp')` }}
@@ -48,7 +48,7 @@ export default function Maintenance() {
               </h1>
             </ScrollAnimation>
             <ScrollAnimation to="left" delay={600}>
-              <p className="text-sm md:text-md text-gray-300">
+              <p className="text-sm text-gray-300">
                 Contamos con el servicio técnico de mantenimiento de equipos
                 manuales, neumáticos, hidráulicos y eléctrico que va más allá de
                 lo que se ofrece actualmente, es un servicio técnico integral
@@ -88,7 +88,7 @@ export default function Maintenance() {
                   height={1000}
                   className="h-48 w-full md:h-80 object-cover"
                 />
-                <div className="absolute hover:bg-black/50 duration-[600ms] top-0 bottom-0 left-0 right-0 cursor-pointer"></div>
+                <div className="absolute hover:bg-black/50 duration-[600ms] top-0 bottom-0 left-0 right-0 cursor-pointer" />
               </ScrollAnimation>
             ))}
           </div>
