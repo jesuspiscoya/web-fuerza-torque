@@ -15,28 +15,32 @@ export default function page() {
   ];
   const maintenances = [
     {
-      title: "Mantenimiento de herramientas",
+      title: "Servicio",
+      subtitle: "Mantenimiento de herramientas",
       desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
       img: "/images/industrias2.jpg",
       background: "bg-blue-gray-800",
       inverted: false,
     },
     {
-      title: "Mantenimiento de equipos hidráulicos",
+      title: "Servicio",
+      subtitle: "Mantenimiento de equipos hidráulicos",
       desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
       img: "/images/industrias2.jpg",
       background: "bg-blue-gray-900",
       inverted: true,
     },
     {
-      title: "Mantenimiento de cilindros hidráulicos",
+      title: "Servicio",
+      subtitle: "Mantenimiento de cilindros hidráulicos",
       desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
       img: "/images/industrias2.jpg",
       background: "bg-gray-900",
       inverted: false,
     },
     {
-      title: "Mantenimiento de elevadores de vehículos livianos",
+      title: "Servicio",
+      subtitle: "Mantenimiento de elevadores de vehículos livianos",
       desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
       img: "/images/industrias2.jpg",
       background: "bg-blue-gray-800",

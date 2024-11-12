@@ -76,13 +76,17 @@ export default function AboutUs() {
             />
           </ScrollAnimation>
           <ScrollAnimation to="bottom" delay={300}>
-            <h1 className="text-4xl md:text-6xl rubik font-bold text-yellow-700">
-              FUERZA & T
-              <i
-                className="fa-solid fa-gear fa-spin fa-sm"
-                aria-hidden="true"
-              ></i>
-              RQUE COMPANY
+            <h1 className="text-5xl md:text-6xl rubik font-bold text-yellow-700 flex flex-wrap justify-center gap-x-3">
+              FUERZA &
+              <span className="block">
+                T
+                <i
+                  className="fa-solid fa-gear fa-spin fa-sm"
+                  aria-hidden="true"
+                ></i>
+                RQUE
+              </span>
+              COMPANY
             </h1>
           </ScrollAnimation>
           <button
@@ -171,7 +175,7 @@ export default function AboutUs() {
                   <TabPanel
                     key={value}
                     value={value}
-                    className="flex flex-col gap-6 text-center md:flex-row md:gap-14 md:text-start text-white p-7 md:px-16 md:py-10 bg-gradient-to-tl to-indigo-800 from-teal-900 border-2 border-blue-gray-50 rounded-xl mt-5"
+                    className="flex flex-col gap-6 text-center md:flex-row md:gap-14 md:text-start text-white p-7 md:px-16 md:py-10 bg-gradient-to-tl to-indigo-800 from-teal-900 rounded-xl mt-5"
                   >
                     <i
                       className={`${icon} text-5xl md:text-6xl text-yellow-500`}

@@ -14,36 +14,41 @@ export default function page() {
   ];
   const services = [
     {
-      title: "Alquiler diario",
-      desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
+      title: "Soluciones",
+      subtitle: "Obras eventuales",
+      desc: "Si necesitas equipos solo para proyectos puntuales, el alquiler es la opción ideal.",
       img: "/images/herramientas.jpg",
-      background: "bg-blue-gray-800",
+      background: "bg-blue-gray-900",
       inverted: false,
     },
     {
-      title: "Alquiler semanal",
-      desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
+      title: "Soluciones",
+      subtitle: "Herramientas de respaldo temporales",
+      desc: "Disponemos de equipos para cubrir cualquier contingencia, manteniendo la continuidad de tu trabajo sin interrupciones.",
       img: "/images/herramientas.jpg",
-      background: "bg-blue-gray-900",
+      background: "bg-blue-gray-800",
       inverted: true,
     },
     {
-      title: "Alquiler mensual",
-      desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
+      title: "Soluciones",
+      subtitle: "Aumento de capacidad productiva a corto plazo",
+      desc: "Si enfrentas picos de demanda, tenemos las herramientas que necesitas para expandir tu capacidad de manera inmediata.",
       img: "/images/herramientas.jpg",
       background: "bg-gray-900",
       inverted: false,
     },
     {
-      title: "Alquiler anual",
-      desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
+      title: "Soluciones",
+      subtitle: "Falta de presupuesto para compra de material",
+      desc: "Si no cuentas con el presupuesto necesario para adquirir nuevos equipos, el alquiler te permite acceder a maquinaria de calidad sin incurrir en grandes gastos.",
       img: "/images/herramientas.jpg",
       background: "bg-blue-gray-800",
       inverted: true,
     },
     {
-      title: "Alquiler venta",
-      desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
+      title: "Soluciones",
+      subtitle: "Disponibilidad inmediata de herramientas",
+      desc: "Gracias a nuestra amplia disponibilidad, puedes contar con los equipos que necesitas de forma rápida y sin demoras.",
       img: "/images/herramientas.jpg",
       background: "bg-blue-gray-900",
       inverted: false,
@@ -55,6 +60,17 @@ export default function page() {
     { title: "Generación Eléctrica", img: "/images/industrias.jpg" },
     { title: "Naviera", img: "/images/industrias.jpg" },
     { title: "Maquinaria", img: "/images/industrias.jpg" },
+  ];
+  const rent = [
+    { bgColor: "bg-yellow-600", color: "text-black", title: "Alquiler diario" },
+    { bgColor: "bg-gray-800", color: "text-white", title: "Alquiler semanal" },
+    { bgColor: "bg-white", color: "text-black", title: "Alquiler mensual" },
+    {
+      bgColor: "bg-blue-gray-900",
+      color: "text-white",
+      title: "Alquiler anual",
+    },
+    { bgColor: "bg-yellow-700", color: "text-white", title: "Alquiler venta" },
   ];
 
   return (
@@ -72,6 +88,34 @@ export default function page() {
               Alquiler
             </h1>
           </ScrollAnimation>
+        </div>
+      </div>
+      <div className="p-7 md:p-16 bg-blue-gray-700">
+        <div className="container flex flex-col gap-10">
+          <ScrollAnimation to={"left"}>
+            <h1
+              className={`text-center text-3xl font-bold text-yellow-700 ${rubik.className}`}
+            >
+              Modalidades de alquiler
+            </h1>
+            <div className="hidden md:block mx-auto h-0.5 bg-red-600 w-56 mt-1 mb-5" />
+          </ScrollAnimation>
+          <div className="flex flex-wrap justify-center">
+            {rent.map(({ bgColor, color, title }, key) => (
+              <ScrollAnimation
+                key={key}
+                to={"bottom"}
+                delay={key * 100}
+                className="w-full md:w-[22rem] cursor-pointer"
+              >
+                <div
+                  className={`${bgColor} ${color} text-center text-3xl font-extrabold px-10 py-20 ${rubik.className}`}
+                >
+                  {title}
+                </div>
+              </ScrollAnimation>
+            ))}
+          </div>
         </div>
       </div>
       {services.map((item, key) => (
@@ -116,12 +160,7 @@ export default function page() {
                 delay={key * 100}
                 className="relative h-60 w-full md:w-[31.71%] overflow-hidden bg-black/70 cursor-default rounded-lg shadow-lg shadow-black/80 duration-500 hover:scale-[1.01] hover:-translate-y-1.5"
               >
-                <Image
-                  src={img}
-                  alt={title}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={img} alt={title} fill className="object-cover" />
                 <div className="absolute flex top-0 bottom-0 left-0 right-0 opacity-0 duration-500 bg-black/70 p-10 hover:opacity-100">
                   <span className="text-3xl font-semibold text-yellow-700 text-center m-auto">
                     {title}

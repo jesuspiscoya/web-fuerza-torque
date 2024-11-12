@@ -58,14 +58,14 @@ export default function page() {
         </div>
       </div>
       <div className="p-7 md:p-16 bg-blue-gray-900">
-        <div className="container text-center flex flex-col gap-8 md:gap-10">
+        <div className="container text-center flex flex-col gap-10">
           <ScrollAnimation to="left">
             <h1
               className={`text-3xl font-bold text-yellow-700 ${rubik.className}`}
             >
               Tipos de herramientas
             </h1>
-            <div className="h-0.5 bg-red-600 max-w-48 mt-1 mb-5 mx-auto" />
+            <div className="hidden md:block h-0.5 bg-red-600 max-w-48 mt-1 mb-5 mx-auto" />
           </ScrollAnimation>
           <div className="grid md:grid-cols-3 gap-5">
             {tools.map(({ img, title, description }, key) => (
