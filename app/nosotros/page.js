@@ -11,11 +11,12 @@ import {
   TabsHeader,
 } from "@material-tailwind/react";
 import Image from "next/image";
+import { rubik } from "../fonts";
 import { useRef } from "react";
-import { caveat, rubik } from "../fonts";
 
-export default function AboutUs() {
+export default function Page() {
   const aboutRef = useRef(null);
+
   const tools = [
     "Herramientas hidráulicas",
     "Herramientas neumáticas",
@@ -103,10 +104,10 @@ export default function AboutUs() {
         className="bg-gradient-to-t to-gray-900 from-blue-gray-900 px-10 md:px-24 py-7"
       >
         <div className="container min-h-screen flex flex-col md:flex-row items-center gap-10 md:gap-16">
-          <div className="flex flex-col gap-7 text-center md:text-start">
+          <div className="flex flex-col w-full gap-7 text-center md:text-start">
             <ScrollAnimation to="left">
               <h1
-                className={`text-6xl md:text-8xl text-white ${caveat.className}`}
+                className={`text-5xl md:text-[5rem] text-yellow-700 font-extrabold ${rubik.className}`}
               >
                 ¿Quiénes somos?
               </h1>
@@ -114,7 +115,7 @@ export default function AboutUs() {
             <ScrollAnimation to="left">
               <p className="md:text-lg text-yellow-50">
                 Somos una empresa 100% peruana, conformada por un equipo técnico
-                multidisciplinario con amplia experiencia en el servicio de e
+                multidisciplinario con amplia experiencia en el servicio de
                 mantenimiento reparación y alquiler de herramientas hidráulicas,
                 neumáticas y eléctricas.
               </p>
@@ -133,13 +134,24 @@ export default function AboutUs() {
               ))}
             </div>
           </div>
-          <ScrollAnimation to="bottom">
+          <ScrollAnimation
+            to="bottom"
+            className="relative w-full h-72 md:h-[29rem] rounded-lg overflow-hidden shadow-xl shadow-black/60 duration-500"
+          >
+            <div className="relative w-full h-full">
+              <Image
+                src="/images/quienes-somos.webp"
+                alt="Quiénes somos"
+                fill
+                className="object-cover"
+              />
+            </div>
             <Image
-              src="/images/img1.png"
-              alt="Sobre nosotros"
-              width={1000}
-              height={1000}
-              className="md:max-w-[36rem] ring-2 ring-blue-gray-200 rounded-xl shadow-lg md:shadow-2xl shadow-yellow-700 md:shadow-yellow-700/55 object-cover mb-4 md:mb-0"
+              src="/images/logo.webp"
+              alt="Logo"
+              width={200}
+              height={200}
+              className="absolute left-4 bottom-4 rounded-md bg-white/65 object-cover w-24 p-1.5"
             />
           </ScrollAnimation>
         </div>
@@ -175,7 +187,7 @@ export default function AboutUs() {
                   <TabPanel
                     key={value}
                     value={value}
-                    className="flex flex-col gap-6 text-center md:flex-row md:gap-14 md:text-start text-white p-7 md:px-16 md:py-10 bg-gradient-to-tl to-indigo-800 from-teal-900 rounded-xl mt-5"
+                    className="flex flex-col gap-6 text-center md:flex-row md:gap-14 md:text-start text-white p-7 md:px-16 md:py-10 bg-gradient-to-tl to-blue-gray-600 from-blue-gray-900 rounded-xl mt-5"
                   >
                     <i
                       className={`${icon} text-5xl md:text-6xl text-yellow-500`}
@@ -192,7 +204,7 @@ export default function AboutUs() {
                           {desc.map(({ icon, desc }, key) => (
                             <div
                               key={key}
-                              className={`p-5 bg-blue-gray-600 hover:bg-yellow-600/55 text-xl rounded-md flex flex-col gap-4 justify-center text-center font-bold cursor-default duration-500 ${rubik.className}`}
+                              className={`p-5 bg-blue-gray-600 shadow-lg hover:bg-black/50 hover:shadow-black/70 hover:-translate-y-1.5 hover:text- text-xl rounded-md flex flex-col gap-4 justify-center text-center font-bold cursor-default duration-500 ${rubik.className}`}
                             >
                               <i
                                 className={`${icon} text-3xl`}

@@ -48,7 +48,7 @@ export default function Content({ element }) {
             />
           </div>
           <Image
-            src={"/images/logo.webp"}
+            src="/images/logo.webp"
             alt="Logo"
             width={200}
             height={200}

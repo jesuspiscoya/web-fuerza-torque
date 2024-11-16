@@ -7,10 +7,10 @@ import { rubik } from "../fonts";
 
 export default function Maintenance() {
   const images = [
-    { img: "/images/herramientas.jpg" },
+    { img: "/images/slider-herramientas.webp" },
     { img: "/images/industrias.jpg" },
     { img: "/images/industrias2.jpg" },
-    { img: "/images/asesoria.jpg" },
+    { img: "/images/slider-asesoria.webp" },
   ];
 
   return (
@@ -18,7 +18,7 @@ export default function Maintenance() {
       <NavBar />
       <div
         className="h-80 md:h-[25rem] bg-no-repeat bg-cover"
-        style={{ backgroundImage: `url('/images/mantenimiento.webp')` }}
+        style={{ backgroundImage: `url('/images/bg-mantenimiento.webp')` }}
       >
         <div className="w-full h-full bg-black/80 flex justify-center items-center">
           <ScrollAnimation to="top">
@@ -62,7 +62,7 @@ export default function Maintenance() {
             className="w-full h-72 md:h-96"
             delay={800}
           >
-            <Slider pharagraph={images} height={"h-72 md:h-96"} />
+            <Slider pharagraph={images} height="h-72 md:h-96" />
           </ScrollAnimation>
         </div>
       </div>

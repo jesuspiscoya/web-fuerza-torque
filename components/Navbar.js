@@ -50,7 +50,7 @@ function NavListMenu({ title, menu }) {
             className="text-sm lg:text-base font-medium"
           >
             <ListItem
-              className={`gap-2 px-4 py-3 lg:py-2 text-gray-300 duration-300 hover:bg-white/20 hover:text-red-500 focus:bg-white/45 focus:text-white active:bg-white/45 active:text-white`}
+              className="gap-2 px-4 py-3 lg:py-2 text-gray-300 duration-300 hover:bg-white/20 hover:text-red-500 focus:bg-white/45 focus:text-white active:bg-white/45 active:text-white"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -70,7 +70,7 @@ function NavListMenu({ title, menu }) {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden bg-blue-gray-900 !translate-y-1 border-0 rounded-lg lg:block">
+        <MenuList className="hidden bg-blue-gray-900 !-translate-y-0.5 border-0 rounded-lg lg:block">
           <ul className="flex flex-col gap-y-2 outline-none">{renderItems}</ul>
         </MenuList>
       </Menu>
@@ -195,11 +195,11 @@ export default function NavBar() {
 
   return (
     <Navbar
-      className={`fixed max-w-none rounded-none border-0 px-7 md:px-16 py-4 z-10 ${
+      className={`fixed max-w-none rounded-none border-0 px-7 md:px-16 py-3 z-10 ${
         isScrolled ? "bg-blue-gray-700" : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex container items-center justify-between">
         <Link href="/">
           {isScrolled ? (
             <Image
@@ -216,6 +216,7 @@ export default function NavBar() {
               width={200}
               height={200}
               className="w-24"
+              priority={true}
             />
           )}
         </Link>
@@ -226,10 +227,9 @@ export default function NavBar() {
           as="a"
           href="/contacto"
           style={{
-            boxShadow: "0 4px 0 -2px white",
             fontFamily: rubik.style.fontFamily,
           }}
-          className="hidden lg:block btn-contact bg-yellow-700 border-2 hover:bg-yellow-800 border-black rounded-full px-6 py-2 text-black font-medium duration-500 hover:text-white"
+          className="hidden lg:block btn-contact bg-yellow-700 hover:bg-yellow-800 rounded-full px-6 py-1.5 text-black font-semibold duration-500 hover:text-white"
         >
           Contacto
         </Typography>

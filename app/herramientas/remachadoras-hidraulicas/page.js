@@ -9,7 +9,7 @@ import React from "react";
 export default function page() {
   const tools = [
     {
-      img: "/images/herramientas.jpg",
+      img: "/images/slider-herramientas.webp",
       title: "Remachadora hidráulica tipo huck",
       description: "Remachadora hidráulica",
     },
@@ -20,7 +20,7 @@ export default function page() {
       <NavBar />
       <div
         className="h-80 md:h-[25rem] bg-no-repeat bg-cover bg-bottom"
-        style={{ backgroundImage: `url('/images/herramientas.webp')` }}
+        style={{ backgroundImage: `url('/images/bg-herramientas.webp')` }}
       >
         <div className="w-full h-full bg-black/80 flex justify-center items-center">
           <ScrollAnimation to="top">
@@ -56,7 +56,7 @@ export default function page() {
             {tools.map(({ img, title, description }, key) => (
               <ScrollAnimation
                 key={key}
-                to={"bottom"}
+                to="bottom"
                 delay={key * 100}
                 className="relative h-72 w-full overflow-hidden bg-black/70 cursor-default shadow-lg shadow-black/70 duration-500"
               >

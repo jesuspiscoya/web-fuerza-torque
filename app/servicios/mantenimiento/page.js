@@ -8,10 +8,10 @@ import React from "react";
 
 export default function page() {
   const images = [
-    { img: "/images/herramientas.jpg" },
+    { img: "/images/slider-herramientas.webp" },
     { img: "/images/industrias.jpg" },
     { img: "/images/industrias2.jpg" },
-    { img: "/images/asesoria.jpg" },
+    { img: "/images/slider-asesoria.webp" },
   ];
   const maintenances = [
     {
@@ -53,7 +53,7 @@ export default function page() {
       <NavBar />
       <div
         className="h-80 md:h-[25rem] bg-no-repeat bg-cover"
-        style={{ backgroundImage: `url('/images/mantenimiento.webp')` }}
+        style={{ backgroundImage: `url('/images/bg-mantenimiento.webp')` }}
       >
         <div className="w-full h-full bg-black/80 flex justify-center items-center">
           <ScrollAnimation to="top">
@@ -76,7 +76,6 @@ export default function page() {
             >
               Galería
             </h1>
-            <div className="h-0.5 bg-red-600 w-16 mt-1 mb-5 mx-auto" />
           </ScrollAnimation>
           <div className="grid md:grid-cols-3 gap-5">
             {[...images, ...images].map(({ img }, key) => (

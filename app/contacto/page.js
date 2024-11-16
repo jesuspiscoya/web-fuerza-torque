@@ -7,7 +7,7 @@ import Form from "@/components/Form";
 import Image from "next/image";
 import { rubik } from "../fonts";
 
-export default function Contact() {
+export default function page() {
   const contact = [
     {
       icon: "fas fa-phone-alt",
@@ -45,14 +45,14 @@ export default function Contact() {
           <div className="relative w-full rounded-xl overflow-hidden shadow-xl shadow-black/80 hover:-translate-y-1.5 duration-500">
             <div className="relative w-full h-full">
               <Image
-                src={"/images/img-contactanos.webp"}
+                src="/images/img-contactanos.webp"
                 alt="Contacto"
                 fill
                 className="object-cover"
               />
             </div>
             <Image
-              src={"/images/logo.webp"}
+              src="/images/logo.webp"
               alt="Logo"
               width={200}
               height={200}
@@ -106,7 +106,7 @@ export default function Contact() {
             ¿Dónde nos encontramos?
           </h1>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d488.11643880994455!2d-77.123032!3d-11.840068!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d43f1bea44a1%3A0x1aa5fa6c53783cf!2sLas%20Orqu%C3%ADdeas%2C%20Ventanilla%2007076!5e0!3m2!1ses-419!2spe!4v1730611685276!5m2!1ses-419!2spe"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3902.8562707960896!2d-77.10943982493984!3d-11.984445588247505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDU5JzA0LjAiUyA3N8KwMDYnMjQuNyJX!5e0!3m2!1ses!2spe!4v1731728267031!5m2!1ses!2spe"
             height="500"
             allowFullScreen=""
             loading="lazy"

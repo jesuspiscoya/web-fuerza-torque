@@ -1,6 +1,5 @@
 "use client";
 
-import { lilita_one } from "@/app/fonts";
 import { useEffect, useState } from "react";
 
 export default function Slider({ pharagraph, height }) {
@@ -67,32 +66,28 @@ export default function Slider({ pharagraph, height }) {
             className={`relative ${height} w-full flex-shrink-0 bg-cover bg-center`}
             style={{ backgroundImage: `url(${img})` }}
           >
-            {title ? (
-              <div className="absolute grid h-full w-full place-items-center bg-black/75">
-                <div className="w-3/4 text-center md:w-2/4 text-gray-300 flex flex-col gap-12">
-                  <h1
-                    className={`text-4xl sm:text-5xl md:text-6xl font-bold text-yellow-700 duration-1000 ${
-                      lilita_one.className
-                    } ${
-                      isVisible
-                        ? "opacity-100 translate-x-0"
-                        : "opacity-0 -translate-y-20"
-                    }`}
-                  >
-                    {title}
-                  </h1>
-                  <p
-                    className={`text-base md:text-xl font-medium duration-1000 ${
-                      isVisible
-                        ? "opacity-100 translate-x-0"
-                        : "opacity-0 -translate-x-20"
-                    }`}
-                  >
-                    {description}
-                  </p>
-                </div>
+            <div className="absolute h-full w-full bg-black/75">
+              <div className="container text-center h-full place-content-center text-gray-300 flex flex-col items-center gap-12">
+                <h1
+                  className={`text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase text-yellow-700 duration-1000 ${
+                    isVisible
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 -translate-y-20"
+                  }`}
+                >
+                  {title}
+                </h1>
+                <p
+                  className={`text-base md:text-xl font-medium duration-1000 w-3/4 md:w-2/4 ${
+                    isVisible
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 -translate-x-20"
+                  }`}
+                >
+                  {description}
+                </p>
               </div>
-            ) : null}
+            </div>
           </div>
         ))}
       </div>

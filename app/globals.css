@@ -2,13 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn-contact:hover {
-  box-shadow: none !important;
-}
-
 .carousel-left {
   animation: move-left 25s linear infinite;
-  width: calc(15rem * 8 + 3rem * 8);
+  width: calc(15rem * 10 + 3rem * 10);
 }
 
 .carousel-right {
@@ -25,7 +21,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-15rem * 4 - 3rem * 4));
+    transform: translateX(calc(-15rem * 5 - 3rem * 5));
   }
 }
 

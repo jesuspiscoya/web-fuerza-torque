@@ -7,10 +7,10 @@ import { rubik } from "../fonts";
 
 export default function Tools() {
   const images = [
-    { img: "/images/herramientas.jpg" },
+    { img: "/images/slider-herramientas.webp" },
     { img: "/images/industrias.jpg" },
     { img: "/images/industrias2.jpg" },
-    { img: "/images/asesoria.jpg" },
+    { img: "/images/slider-asesoria.webp" },
   ];
 
   return (
@@ -62,7 +62,7 @@ export default function Tools() {
             className="w-full h-72 md:h-96"
             delay={800}
           >
-            <Slider pharagraph={images} height={"h-72 md:h-96"} />
+            <Slider pharagraph={images} height="h-72 md:h-96" />
           </ScrollAnimation>
         </div>
       </div>

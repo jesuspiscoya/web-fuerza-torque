@@ -5,9 +5,8 @@ export default function Footer() {
     {
       icon: "fa-facebook",
       color: "text-blue-400",
-      url: "https://www.facebook.com/fuerzaytorquecompany",
+      url: "https://www.facebook.com/p/Fuerza-Torque-Company-100087431933831/",
     },
-    { icon: "fa-youtube", color: "text-red-500", url: "#" },
     {
       icon: "fa-whatsapp",
       color: "text-[#3ae44b]",
@@ -28,7 +27,7 @@ export default function Footer() {
   const contact = [
     { name: "+51 948 911 431", icon: "fa-phone" },
     {
-      name: "Lt 14. residencial Las Orquideas etapa 1, Callao - Perú",
+      name: "Calle Las Magnolias, Mz D lt 15, Urb. Las Orquídeas",
       icon: "fa-map-marker-alt",
     },
     {

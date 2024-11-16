@@ -9,7 +9,7 @@ import React from "react";
 export default function page() {
   const tools = [
     {
-      img: "/images/herramientas.jpg",
+      img: "/images/slider-herramientas.webp",
       title: "Llaves de torque neumáticas RAD hasta 8500 ft.lbs",
       description: "Llaves de Torque",
     },
@@ -29,7 +29,7 @@ export default function page() {
       description: "Llaves de Torque",
     },
     {
-      img: "/images/herramientas.jpg",
+      img: "/images/slider-herramientas.webp",
       title: "Llaves de respaldo Hytorc",
       description: "Llaves de Torque",
     },
@@ -81,7 +81,7 @@ export default function page() {
             {tools.map(({ img, title, description }, key) => (
               <ScrollAnimation
                 key={key}
-                to={"bottom"}
+                to="bottom"
                 delay={key * 100}
                 className="relative h-72 w-full overflow-hidden bg-black/70 cursor-default shadow-lg shadow-black/70 duration-500"
               >

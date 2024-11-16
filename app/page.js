@@ -5,13 +5,13 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 import Slider from "@/components/Slider";
 import Image from "next/image";
 import Link from "next/link";
-import { caveat, rubik } from "./fonts";
+import { rubik } from "./fonts";
 
-export default function Home() {
+export default function page() {
   const slider = [
     {
-      img: "/images/herramientas.jpg",
-      title: "Alquiler de Herramientas Hidráulicas y Neumáticas",
+      img: "/images/slider-herramientas.webp",
+      title: "Alquiler de Herramientas de Torque Hidráulicas y Neumáticas",
       description:
         "Ahorra en costos y espacio con una amplia gama de herramientas neumáticas en alquiler para todo tipo de proyectos, ideal para profesionales y aficionados",
     },
@@ -25,10 +25,10 @@ export default function Home() {
       img: "/images/industrias2.jpg",
       title: "Reparación Rápida y Eficiente",
       description:
-        "Ofrecemos servicios de reparación rápida y efectiva, con piezas de alta calidad y un servicio al cliente excepcional",
+        "Ofrecemos servicios de reparación rápida y efectiva, con piezas originales de alta calidad y un servicio al cliente excepcional",
     },
     {
-      img: "/images/asesoria.jpg",
+      img: "/images/slider-asesoria.webp",
       title: "Asesoría Personalizada",
       description:
         "¿No sabes qué herramienta necesitas? Nuestro equipo te ofrece asesoría personalizada para encontrar la solución perfecta según tus requerimientos y presupuesto",
@@ -39,57 +39,58 @@ export default function Home() {
       title: "Alquiler",
       description:
         "Alquilamos herramientas y equipos de alta calidad de marcas reconocidas.",
-      image: "/images/herramientas3.webp",
+      image: "/images/herramientas.webp",
       url: "/servicios",
     },
     {
       title: "Mantenimiento",
       description:
         "Realizamos mantenimientos profesionales de tipo preventivo, correctivo y predictivo",
-      image: "/images/mantenimiento2.jpg",
+      image: "/images/mantenimiento.webp",
       url: "/servicios",
     },
     {
       title: "Reparación",
       description: "Reparamos todo tipo de equipos y herramientas mayores.",
-      image: "/images/industrias2.jpg",
+      image: "/images/reparacion.webp",
       url: "/servicios",
     },
   ];
   const brands = [
-    { title: "Tarjeta 1", img: "/images/marca1.webp" },
-    { title: "Tarjeta 2", img: "/images/marca2.webp" },
-    { title: "Tarjeta 3", img: "/images/marca3.webp" },
-    { title: "Tarjeta 4", img: "/images/marca4.webp" },
+    { title: "Ingersoll Rand", img: "/images/marca1.webp" },
+    { title: "Raid", img: "/images/marca2.webp" },
+    { title: "Hytorc", img: "/images/marca3.webp" },
+    { title: "CDI Torque", img: "/images/marca4.webp" },
+    { title: "Huck", img: "/images/marca5.webp" },
   ];
   const companys = [
     {
-      title: "Tarjeta 1",
+      title: "Esermin Global",
       img: "/images/company1.webp",
       url: "https://eserminglobal.com/",
     },
     {
-      title: "Tarjeta 2",
+      title: "Metso",
       img: "/images/company2.webp",
       url: "https://www.metso.com/",
     },
     {
-      title: "Tarjeta 3",
+      title: "Chinalco",
       img: "/images/company3.webp",
       url: "https://www.chinalco.com.pe/",
     },
     {
-      title: "Tarjeta 4",
+      title: "Macom",
       img: "/images/company4.webp",
       url: "https://macomperu.com/",
     },
     {
-      title: "Tarjeta 4",
+      title: "Energ",
       img: "/images/company5.webp",
       url: "https://www.energ.uy/",
     },
     {
-      title: "Tarjeta 4",
+      title: "HM Consulting S.A.C.",
       img: "/images/company6.webp",
       url: "https://hmconsultingsac.net/",
     },
@@ -99,7 +100,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <Slider pharagraph={slider} height={"h-screen"} />
+      <Slider pharagraph={slider} height="h-screen" />
       <div className="bg-gradient-to-t to-gray-900 from-blue-gray-900 text-center p-7 md:p-16">
         <ScrollAnimation to="top">
           <span
@@ -154,22 +155,19 @@ export default function Home() {
           style={{ backgroundImage: `url('/images/bg-que-hacemos.webp')` }}
         />
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/75">
-          <div className="container flex flex-col py-7 md:flex-row md:gap-10 text-center items-center h-full">
+          <div className="container flex flex-col py-7 md:flex-row md:gap-20 text-center items-center h-full">
             <ScrollAnimation to="left" className="w-full md:text-start">
-              <h1
-                className={`text-5xl md:text-8xl text-yellow-700 md:text-white px-20 ${caveat.className}`}
-              >
+              <h1 className="text-4xl md:text-7xl text-yellow-700 md:text-white font-extrabold">
                 ¿Qué hacemos?
               </h1>
             </ScrollAnimation>
             <ScrollAnimation
               to="bottom"
-              className="w-full text-center p-8 md:px-14 flex flex-col justify-center md:bg-black/80 rounded-3xl md:ring-1 md:shadow-2xl md:shadow-black cursor-default"
+              className="md:w-full text-center p-8 md:px-14 flex flex-col justify-center md:bg-black/80 rounded-3xl md:ring-1 md:shadow-2xl md:shadow-black cursor-default"
             >
               <h1 className="hidden md:block text-xl md:text-2xl font-bold text-yellow-700">
                 SERVICIOS DE CALIDAD
               </h1>
-              <div className="hidden md:block h-0.5 bg-red-600 w-48 mx-auto mt-1 mb-5" />
               <p className="text-gray-300 text-sm">
                 <strong>FUERZA Y TOQUE COMPANY</strong> se destaca como un líder
                 en el mercado, brindando herramientas y servicios especializados
@@ -182,7 +180,7 @@ export default function Home() {
                     aria-hidden="true"
                   ></i>
                   <h2
-                    className={`text-yellow-700 text-2xl my-4 font-semibold ${caveat.className}`}
+                    className={`text-yellow-700 text-xl my-4 font-bold ${rubik.className}`}
                   >
                     Alta Calidad
                   </h2>
@@ -194,11 +192,11 @@ export default function Home() {
                 </div>
                 <div className="rounded-2xl shadow-lg shadow-blue-gray-700 bg-blue-gray-900 border-2 border-yellow-300 w-full p-6 md:py-10 md:px-6 hover:scale-105 duration-500 hover:shadow-md">
                   <i
-                    className="fa-solid fa-helmet-safety fa-2xl text-red-700"
+                    className="fa-solid fa-helmet-safety fa-2xl text-white"
                     aria-hidden="true"
                   ></i>
                   <h2
-                    className={`text-yellow-700 text-2xl my-4 font-semibold ${caveat.className}`}
+                    className={`text-yellow-700 text-xl my-4 font-bold ${rubik.className}`}
                   >
                     Confianza y Servicio
                   </h2>
