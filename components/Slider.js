@@ -69,7 +69,7 @@ export default function Slider({ pharagraph, height }) {
             <div className="absolute h-full w-full bg-black/75">
               <div className="container text-center h-full place-content-center text-gray-300 flex flex-col items-center gap-12">
                 <h1
-                  className={`text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase text-yellow-700 duration-1000 ${
+                  className={`text-3xl px-7 sm:text-4xl md:text-6xl font-extrabold uppercase text-yellow-700 duration-1000 ${
                     isVisible
                       ? "opacity-100 translate-x-0"
                       : "opacity-0 -translate-y-20"

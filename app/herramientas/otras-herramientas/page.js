@@ -65,7 +65,6 @@ export default function page() {
             >
               Tipos de herramientas
             </h1>
-            <div className="hidden md:block h-0.5 bg-red-600 max-w-48 mt-1 mb-5 mx-auto" />
           </ScrollAnimation>
           <div className="grid md:grid-cols-3 gap-5">
             {tools.map(({ img, title, description }, key) => (
@@ -78,7 +77,7 @@ export default function page() {
                 <Image src={img} alt={title} fill className="object-cover" />
                 <div className="absolute flex flex-col justify-center text-center gap-5 p-10 text-sm top-0 bottom-0 left-0 right-0 opacity-0 duration-500 bg-black/70 hover:opacity-100">
                   <h1
-                    className={`text-red-700 font-bold text-2xl ${rubik.className}`}
+                    className={`text-yellow-700 font-bold text-2xl ${rubik.className}`}
                   >
                     {title}
                   </h1>

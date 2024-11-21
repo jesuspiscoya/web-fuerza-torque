@@ -116,7 +116,7 @@ export default function Page() {
               <p className="md:text-lg text-yellow-50">
                 Somos una empresa 100% peruana, conformada por un equipo técnico
                 multidisciplinario con amplia experiencia en el servicio de
-                mantenimiento reparación y alquiler de herramientas hidráulicas,
+                mantenimiento, reparación y alquiler de herramientas hidráulicas,
                 neumáticas y eléctricas.
               </p>
             </ScrollAnimation>

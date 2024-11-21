@@ -40,20 +40,20 @@ export default function page() {
       description:
         "Alquilamos herramientas y equipos de alta calidad de marcas reconocidas.",
       image: "/images/herramientas.webp",
-      url: "/servicios",
+      url: "/servicios/alquiler",
     },
     {
       title: "Mantenimiento",
       description:
         "Realizamos mantenimientos profesionales de tipo preventivo, correctivo y predictivo",
       image: "/images/mantenimiento.webp",
-      url: "/servicios",
+      url: "/servicios/mantenimiento",
     },
     {
       title: "Reparación",
       description: "Reparamos todo tipo de equipos y herramientas mayores.",
       image: "/images/reparacion.webp",
-      url: "/servicios",
+      url: "/servicios/reparacion",
     },
   ];
   const brands = [
@@ -133,7 +133,7 @@ export default function page() {
               />
               <div className="absolute opacity-0 pt-52 hover:pt-10 hover:opacity-100 flex flex-col gap-5 bg-black/80 top-0 bottom-0 left-0 right-0 justify-center text-center duration-500 p-10 text-sm">
                 <h1
-                  className={`text-red-700 font-bold text-2xl ${rubik.className}`}
+                  className={`text-yellow-700 font-bold text-2xl ${rubik.className}`}
                 >
                   {title}
                 </h1>
@@ -216,27 +216,25 @@ export default function page() {
           style={{ backgroundImage: `url('/images/bg-marcas.webp')` }}
         />
         <div className="relative flex flex-col gap-20 h-full bg-black/80 text-yellow-50 w-full py-20 md:py-24">
-          <div className="container flex flex-col gap-6">
-            <ScrollAnimation to="right">
-              <div className="flex flex-col items-center text-center md:items-start">
-                <h1 className="text-xl md:text-2xl font-bold text-yellow-700">
-                  MARCAS DE ALQUILER
-                </h1>
-                <div className="h-0.5 bg-red-600 w-40 md:w-52 mt-1 mb-5" />
-              </div>
+          <div className="container flex flex-col gap-7">
+            <ScrollAnimation to="right" className="text-center md:text-start">
+              <h1 className="text-xl md:text-2xl font-bold text-yellow-700">
+                MARCAS DE ALQUILER
+              </h1>
             </ScrollAnimation>
             <ScrollAnimation to="bottom">
               <Carousel elements={brands} />
             </ScrollAnimation>
           </div>
-          <div className="container flex flex-col gap-6">
-            <ScrollAnimation to="right" delay={200}>
-              <div className="flex flex-col items-center text-center md:items-start">
-                <h1 className="text-xl md:text-2xl font-bold text-yellow-700">
-                  NUESTROS CLIENTES
-                </h1>
-                <div className="h-0.5 bg-red-600 w-40 md:w-52 mt-1 mb-5" />
-              </div>
+          <div className="container flex flex-col gap-7">
+            <ScrollAnimation
+              to="right"
+              delay={200}
+              className="text-center md:text-start"
+            >
+              <h1 className="text-xl md:text-2xl font-bold text-yellow-700">
+                NUESTROS CLIENTES
+              </h1>
             </ScrollAnimation>
             <ScrollAnimation to="bottom" delay={200}>
               <Carousel elements={companys} rigth={true} />

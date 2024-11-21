@@ -127,7 +127,7 @@ export default function Form() {
         }
       />
       {errors.name && (
-        <div className="flex gap-2 text-sm text-red-500 mt-3">
+        <div className="flex gap-2 text-sm text-red-500 -mt-3">
           <i className="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
           {errors.name}
         </div>
@@ -156,7 +156,7 @@ export default function Form() {
         }
       />
       {errors.email && (
-        <div className="flex gap-2 text-sm text-red-500 -mt-2">
+        <div className="flex gap-2 text-sm text-red-500 -mt-3">
           <i className="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
           {errors.email}
         </div>
@@ -185,7 +185,7 @@ export default function Form() {
         }
       />
       {errors.phone && (
-        <div className="flex gap-2 text-sm text-red-500 -mt-2">
+        <div className="flex gap-2 text-sm text-red-500 -mt-3">
           <i className="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
           {errors.phone}
         </div>
@@ -214,7 +214,7 @@ export default function Form() {
         }
       />
       {errors.company && (
-        <div className="flex gap-2 text-sm text-red-500 -mt-2">
+        <div className="flex gap-2 text-sm text-red-500 -mt-3">
           <i className="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
           {errors.company}
         </div>
@@ -243,7 +243,7 @@ export default function Form() {
         }
       />
       {errors.subject && (
-        <div className="flex gap-2 text-sm text-red-500 -mt-2">
+        <div className="flex gap-2 text-sm text-red-500 -mt-3">
           <i className="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
           {errors.subject}
         </div>
@@ -263,7 +263,7 @@ export default function Form() {
         }}
       />
       {errors.message && (
-        <div className="flex gap-2 text-sm text-red-500 -mt-2">
+        <div className="flex gap-2 text-sm text-red-500 -mt-3">
           <i className="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
           {errors.message}
         </div>

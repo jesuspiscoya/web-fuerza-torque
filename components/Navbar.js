@@ -50,7 +50,7 @@ function NavListMenu({ title, menu }) {
             className="text-sm lg:text-base font-medium"
           >
             <ListItem
-              className="gap-2 px-4 py-3 lg:py-2 text-gray-300 duration-300 hover:bg-white/20 hover:text-red-500 focus:bg-white/45 focus:text-white active:bg-white/45 active:text-white"
+              className="gap-2 px-4 py-3 lg:py-2 text-gray-300 duration-300 hover:bg-white/20 hover:text-yellow-700 focus:bg-white/45 focus:text-white active:bg-white/45 active:text-white"
               selected={isMenuOpen || isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
@@ -110,12 +110,12 @@ function NavList() {
       url: "/servicios/alquiler",
     },
     {
-      subtitle: "Reparación",
-      url: "/servicios/reparacion",
-    },
-    {
       subtitle: "Mantenimiento",
       url: "/servicios/mantenimiento",
+    },
+    {
+      subtitle: "Reparación",
+      url: "/servicios/reparacion",
     },
   ];
   const menuTools = [
@@ -158,7 +158,7 @@ function NavList() {
               title === "Contacto" ? "lg:hidden" : ""
             }`}
           >
-            <ListItem className="text-gray-300 duration-300 px-4 py-3 lg:py-2 hover:bg-white/20 hover:text-red-500">
+            <ListItem className="text-gray-300 duration-300 px-4 py-3 lg:py-2 hover:bg-white/20 hover:text-yellow-700">
               {title}
             </ListItem>
           </Typography>

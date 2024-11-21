@@ -98,7 +98,6 @@ export default function page() {
             >
               Modalidades de alquiler
             </h1>
-            <div className="hidden md:block mx-auto h-0.5 bg-red-600 w-56 mt-1 mb-5" />
           </ScrollAnimation>
           <div className="flex flex-wrap justify-center">
             {rent.map(({ bgColor, color, title }, key) => (
@@ -147,7 +146,7 @@ export default function page() {
           </div>
           <ScrollAnimation to="bottom" className="text-center">
             <span
-              className={`text-lg md:text-2xl font-bold text-red-700 ${rubik.className}`}
+              className={`text-lg md:text-2xl font-bold text-white ${rubik.className}`}
             >
               Rubros a los que realizamos alquiler
             </span>
@@ -166,36 +165,6 @@ export default function page() {
                     {title}
                   </span>
                 </div>
-              </ScrollAnimation>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="p-7 md:p-16 bg-blue-gray-900">
-        <div className="container text-center flex flex-col gap-8 md:gap-10">
-          <ScrollAnimation to="left">
-            <h1
-              className={`text-3xl font-bold text-yellow-700 ${rubik.className}`}
-            >
-              Galería
-            </h1>
-          </ScrollAnimation>
-          <div className="grid md:grid-cols-3 gap-5">
-            {[...images, ...images].map(({ img }, key) => (
-              <ScrollAnimation
-                key={key}
-                to="bottom"
-                className="relative"
-                delay={key * 100}
-              >
-                <Image
-                  src={img}
-                  alt="Galería de servicios"
-                  width={1000}
-                  height={1000}
-                  className="h-48 w-full md:h-80 object-cover"
-                />
-                <div className="absolute hover:bg-black/50 duration-[600ms] top-0 bottom-0 left-0 right-0 cursor-pointer" />
               </ScrollAnimation>
             ))}
           </div>

@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
         <div className="flex justify-center gap-20">
           <div className="hidden md:flex flex-col items-end gap-6">
-            <h1 className="text-lg font-semibold text-red-700 cursor-default">
+            <h1 className="text-lg font-semibold text-yellow-700 cursor-default">
               Servicios
             </h1>
             {services.map(({ name, url }, key) => (
@@ -80,7 +80,7 @@ export default function Footer() {
             ))}
           </div>
           <div className="hidden md:flex flex-col text-end gap-6">
-            <h1 className="text-lg font-semibold text-red-700 cursor-default">
+            <h1 className="text-lg font-semibold text-yellow-700 cursor-default">
               Productos
             </h1>
             {products.map(({ name, url }, key) => (
@@ -94,7 +94,7 @@ export default function Footer() {
             ))}
           </div>
           <div className="flex flex-col md:items-end gap-6 md:max-w-60 cursor-default">
-            <h1 className="text-lg font-semibold text-red-700">Contáctanos</h1>
+            <h1 className="text-lg font-semibold text-yellow-700">Contáctanos</h1>
             {contact.map(({ name, icon }, key) => (
               <div key={key} className="md:text-end">
                 <i className={`fa-solid ${icon} me-2`} aria-hidden="true"></i>
@@ -118,7 +118,7 @@ export default function Footer() {
           <a
             href="https://www.linkedin.com/in/jesuspiscoya/"
             target="_blank"
-            className="text-red-700 hover:text-yellow-700 duration-500"
+            className="text-yellow-700 hover:text-yellow-700 duration-500"
           >
             <strong>Jesus Piscoya</strong>
           </a>

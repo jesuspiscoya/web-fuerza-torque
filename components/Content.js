@@ -13,7 +13,7 @@ export default function Content({ element }) {
         <div className="flex flex-col text-center md:text-left gap-4 md:gap-5 w-full">
           <ScrollAnimation to={`${element.inverted ? "right" : "left"}`}>
             <span
-              className={`md:text-lg font-bold text-red-700 ${rubik.className}`}
+              className={`md:text-lg font-bold text-white ${rubik.className}`}
             >
               {element.title}
             </span>

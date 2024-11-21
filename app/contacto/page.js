@@ -19,7 +19,7 @@ export default function page() {
     },
     {
       icon: "fas fa-map-marker-alt",
-      text: "Lt 14. Residencial Las Orquideas Etapa 1, Ventanilla Callao - Perú",
+      text: "Calle Las Magnolias, Mz D lt 15, Urb. Las Orquídeas",
     },
   ];
 
@@ -61,7 +61,7 @@ export default function page() {
           </div>
           <div className="flex flex-col gap-8 w-full text-center md:text-start">
             <div className="flex flex-col gap-2">
-              <span className={`font-bold text-red-700 ${rubik.className}`}>
+              <span className={`font-bold text-white ${rubik.className}`}>
                 Contáctenos
               </span>
               <h1
@@ -76,7 +76,7 @@ export default function page() {
       </div>
       <div className="bg-black/85">
         <div className="container flex flex-col gap-8 p-7 md:p-16">
-          <span className={`font-bold text-red-700 text-xl ${rubik.className}`}>
+          <span className={`font-bold text-white text-xl ${rubik.className}`}>
             Información de contacto
           </span>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
