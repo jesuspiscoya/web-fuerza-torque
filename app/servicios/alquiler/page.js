@@ -17,7 +17,7 @@ export default function page() {
       title: "Soluciones",
       subtitle: "Obras eventuales",
       desc: "Si necesitas equipos solo para proyectos puntuales, el alquiler es la opción ideal.",
-      img: "/images/obras-eventuales.jpg",
+      img: "/images/alquiler-obras-eventuales.jpg",
       background: "bg-blue-gray-900",
       inverted: false,
     },
@@ -25,7 +25,7 @@ export default function page() {
       title: "Soluciones",
       subtitle: "Herramientas de respaldo temporales",
       desc: "Disponemos de equipos para cubrir cualquier contingencia, manteniendo la continuidad de tu trabajo sin interrupciones.",
-      img: "/images/respaldo-temporal.jpg",
+      img: "/images/alquiler-herramientas-temporales.jpg",
       background: "bg-blue-gray-800",
       inverted: true,
     },
@@ -33,7 +33,7 @@ export default function page() {
       title: "Soluciones",
       subtitle: "Aumento de capacidad productiva a corto plazo",
       desc: "Si enfrentas picos de demanda, tenemos las herramientas que necesitas para expandir tu capacidad de manera inmediata.",
-      img: "/images/aumento-capacidad.jpg",
+      img: "/images/alquiler-aumento-capacidad.jpg",
       background: "bg-gray-900",
       inverted: false,
     },
@@ -41,7 +41,7 @@ export default function page() {
       title: "Soluciones",
       subtitle: "Falta de presupuesto para compra de material",
       desc: "Si no cuentas con el presupuesto necesario para adquirir nuevos equipos, el alquiler te permite acceder a maquinaria de calidad sin incurrir en grandes gastos.",
-      img: "/images/falta-presupuesto.jpeg",
+      img: "/images/alquiler-falta-presupuesto.jpeg",
       background: "bg-blue-gray-800",
       inverted: true,
     },
@@ -49,7 +49,7 @@ export default function page() {
       title: "Soluciones",
       subtitle: "Disponibilidad inmediata de herramientas",
       desc: "Gracias a nuestra amplia disponibilidad, puedes contar con los equipos que necesitas de forma rápida y sin demoras.",
-      img: "/images/disponibilidad-inmediata.jpg",
+      img: "/images/alquiler-disponibilidad-inmediata.jpg",
       background: "bg-blue-gray-900",
       inverted: false,
     },
@@ -170,6 +170,36 @@ export default function page() {
           </div>
         </div>
       </div>
+      {/* <div className="p-7 md:p-16 bg-blue-gray-900">
+        <div className="container text-center flex flex-col gap-8 md:gap-10">
+          <ScrollAnimation to="left">
+            <h1
+              className={`text-3xl font-bold text-yellow-700 ${rubik.className}`}
+            >
+              Galería
+            </h1>
+          </ScrollAnimation>
+          <div className="grid md:grid-cols-3 gap-5">
+            {[...images, ...images].map(({ img }, key) => (
+              <ScrollAnimation
+                key={key}
+                to="bottom"
+                className="relative"
+                delay={key * 100}
+              >
+                <Image
+                  src={img}
+                  alt="Galería de servicios"
+                  width={1000}
+                  height={1000}
+                  className="h-48 w-full md:h-80 object-cover"
+                />
+                <div className="absolute hover:bg-black/50 duration-[600ms] top-0 bottom-0 left-0 right-0 cursor-pointer" />
+              </ScrollAnimation>
+            ))}
+          </div>
+        </div>
+      </div> */}
       <Footer />
     </>
   );

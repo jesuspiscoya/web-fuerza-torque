@@ -52,7 +52,7 @@ export default function page() {
     <>
       <NavBar />
       <div
-        className="h-80 md:h-[25rem] bg-no-repeat bg-cover"
+        className="h-80 md:h-[25rem] bg-no-repeat bg-cover bg-center"
         style={{ backgroundImage: `url('/images/bg-mantenimiento.webp')` }}
       >
         <div className="w-full h-full bg-black/80 flex justify-center items-center">
@@ -68,36 +68,6 @@ export default function page() {
       {maintenances.map((item, key) => (
         <Content key={key} element={item} />
       ))}
-      <div className="p-7 md:p-16 bg-blue-gray-900">
-        <div className="container text-center flex flex-col gap-8 md:gap-10">
-          <ScrollAnimation to="left">
-            <h1
-              className={`text-3xl font-bold text-yellow-700 ${rubik.className}`}
-            >
-              Galería
-            </h1>
-          </ScrollAnimation>
-          <div className="grid md:grid-cols-3 gap-5">
-            {[...images, ...images].map(({ img }, key) => (
-              <ScrollAnimation
-                key={key}
-                to="bottom"
-                className="relative"
-                delay={key * 100}
-              >
-                <Image
-                  src={img}
-                  alt="Galería de servicios"
-                  width={1000}
-                  height={1000}
-                  className="h-48 w-full md:h-80 object-cover"
-                />
-                <div className="absolute hover:bg-black/50 duration-[600ms] top-0 bottom-0 left-0 right-0 cursor-pointer" />
-              </ScrollAnimation>
-            ))}
-          </div>
-        </div>
-      </div>
       <Footer />
     </>
   );

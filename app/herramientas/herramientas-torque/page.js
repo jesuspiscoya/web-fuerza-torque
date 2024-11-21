@@ -9,34 +9,28 @@ import React from "react";
 export default function page() {
   const tools = [
     {
-      img: "/images/slider-herramientas.webp",
+      img: "/images/llave-rad.png",
       title: "Llaves de torque neumáticas RAD hasta 8500 ft.lbs",
-      description: "Llaves de Torque",
     },
     {
-      img: "/images/industrias.jpg",
+      img: "/images/llave-stealth.png",
       title: "Llaves de torque hidráulica modelo Stealth hasta 47069 Nm",
-      description: "Llaves de Torque",
     },
     {
-      img: "/images/industrias2.jpg",
+      img: "/images/llave-avanti.png",
       title: "Llaves de torque Hidráulico modelo Avanti hasta 24252 Nm",
-      description: "Llaves de Torque",
     },
     {
-      img: "/images/herramientas2.jpg",
+      img: "/images/llave-hidraulica-dado.png",
       title: "Llaves hidráulicas para trabajo con dado",
-      description: "Llaves de Torque",
     },
     {
-      img: "/images/slider-herramientas.webp",
+      img: "/images/llave-respaldo.png",
       title: "Llaves de respaldo Hytorc",
-      description: "Llaves de Torque",
     },
     {
-      img: "/images/industrias.jpg",
+      img: "/images/torquimetro.png",
       title: "Torquímetro hasta 2000 ft.lbs",
-      description: "Llaves de Torque",
     },
   ];
 
@@ -82,16 +76,21 @@ export default function page() {
                 key={key}
                 to="bottom"
                 delay={key * 100}
-                className="relative h-72 w-full overflow-hidden bg-black/70 cursor-default shadow-lg shadow-black/70 duration-500"
+                className="relative flex p-8 h-72 w-full overflow-hidden bg-white rounded-md cursor-default shadow-lg shadow-black/70 duration-500"
               >
-                <Image src={img} alt={title} fill className="object-cover" />
-                <div className="absolute flex flex-col justify-center text-center gap-5 p-10 text-sm top-0 bottom-0 left-0 right-0 opacity-0 duration-500 bg-black/70 hover:opacity-100">
+                <Image
+                  src={img}
+                  alt={title}
+                  width={200}
+                  height={200}
+                  className="object-contain w-full"
+                />
+                <div className="absolute text-center p-10 text-sm top-0 bottom-0 left-0 right-0 opacity-0 duration-500 bg-black/70 hover:opacity-100 content-center">
                   <h1
                     className={`text-yellow-700 font-bold text-2xl ${rubik.className}`}
                   >
                     {title}
                   </h1>
-                  <p className="text-gray-400">{description}</p>
                 </div>
               </ScrollAnimation>
             ))}
