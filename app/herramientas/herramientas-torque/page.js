@@ -9,27 +9,27 @@ import React from "react";
 export default function page() {
   const tools = [
     {
-      img: "/images/llave-rad.png",
+      img: "/images/llave-rad.webp",
       title: "Llaves de torque neumáticas RAD hasta 8500 ft.lbs",
     },
     {
-      img: "/images/llave-stealth.png",
+      img: "/images/llave-stealth.webp",
       title: "Llaves de torque hidráulica modelo Stealth hasta 47069 Nm",
     },
     {
-      img: "/images/llave-avanti.png",
+      img: "/images/llave-avanti.webp",
       title: "Llaves de torque Hidráulico modelo Avanti hasta 24252 Nm",
     },
     {
-      img: "/images/llave-hidraulica-dado.png",
+      img: "/images/llave-hidraulica-dado.webp",
       title: "Llaves hidráulicas para trabajo con dado",
     },
     {
-      img: "/images/llave-respaldo.png",
+      img: "/images/llave-respaldo.webp",
       title: "Llaves de respaldo Hytorc",
     },
     {
-      img: "/images/torquimetro.png",
+      img: "/images/torquimetro.webp",
       title: "Torquímetro hasta 2000 ft.lbs",
     },
   ];
@@ -39,7 +39,7 @@ export default function page() {
       <NavBar />
       <div
         className="h-80 md:h-[25rem] bg-no-repeat bg-cover bg-bottom"
-        style={{ backgroundImage: `url('/images/herramientas.webp')` }}
+        style={{ backgroundImage: `url('/images/bg-herramientas.webp')` }}
       >
         <div className="w-full h-full bg-black/80 flex justify-center items-center">
           <ScrollAnimation to="top">
@@ -56,7 +56,7 @@ export default function page() {
           title: "Herramienta",
           subtitle: "Llaves de Torque",
           desc: "Contamos con una variedad de herramientas de torque, incluyendo llaves hidráulicas, neumáticas y eléctricas, diseñadas para ofrecer un control preciso y seguro en aplicaciones que requieren un alto par de apriete.",
-          img: "/images/herramientas2.jpg",
+          img: "/images/llaves-torque.webp",
           background: "bg-blue-gray-800",
           inverted: false,
         }}
@@ -71,7 +71,7 @@ export default function page() {
             </h1>
           </ScrollAnimation>
           <div className="grid md:grid-cols-3 gap-5">
-            {tools.map(({ img, title, description }, key) => (
+            {tools.map(({ img, title }, key) => (
               <ScrollAnimation
                 key={key}
                 to="bottom"

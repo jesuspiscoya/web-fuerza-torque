@@ -7,9 +7,9 @@ import Image from "next/image";
 
 export default function page() {
   const images = [
+    { img: "/images/herramientas.webp" },
+    { img: "/images/bg-reparacion.webp" },
     { img: "/images/slider-herramientas.webp" },
-    { img: "/images/industrias.jpg" },
-    { img: "/images/industrias2.jpg" },
     { img: "/images/slider-asesoria.webp" },
   ];
   const services = [
@@ -17,7 +17,7 @@ export default function page() {
       title: "Soluciones",
       subtitle: "Obras eventuales",
       desc: "Si necesitas equipos solo para proyectos puntuales, el alquiler es la opción ideal.",
-      img: "/images/alquiler-obras-eventuales.jpg",
+      img: "/images/alquiler-obras-eventuales.webp",
       background: "bg-blue-gray-900",
       inverted: false,
     },
@@ -25,7 +25,7 @@ export default function page() {
       title: "Soluciones",
       subtitle: "Herramientas de respaldo temporales",
       desc: "Disponemos de equipos para cubrir cualquier contingencia, manteniendo la continuidad de tu trabajo sin interrupciones.",
-      img: "/images/alquiler-herramientas-temporales.jpg",
+      img: "/images/alquiler-herramientas-temporales.webp",
       background: "bg-blue-gray-800",
       inverted: true,
     },
@@ -33,7 +33,7 @@ export default function page() {
       title: "Soluciones",
       subtitle: "Aumento de capacidad productiva a corto plazo",
       desc: "Si enfrentas picos de demanda, tenemos las herramientas que necesitas para expandir tu capacidad de manera inmediata.",
-      img: "/images/alquiler-aumento-capacidad.jpg",
+      img: "/images/alquiler-aumento-capacidad.webp",
       background: "bg-gray-900",
       inverted: false,
     },
@@ -41,7 +41,7 @@ export default function page() {
       title: "Soluciones",
       subtitle: "Falta de presupuesto para compra de material",
       desc: "Si no cuentas con el presupuesto necesario para adquirir nuevos equipos, el alquiler te permite acceder a maquinaria de calidad sin incurrir en grandes gastos.",
-      img: "/images/alquiler-falta-presupuesto.jpeg",
+      img: "/images/alquiler-falta-presupuesto.webp",
       background: "bg-blue-gray-800",
       inverted: true,
     },
@@ -49,16 +49,16 @@ export default function page() {
       title: "Soluciones",
       subtitle: "Disponibilidad inmediata de herramientas",
       desc: "Gracias a nuestra amplia disponibilidad, puedes contar con los equipos que necesitas de forma rápida y sin demoras.",
-      img: "/images/alquiler-disponibilidad-inmediata.jpg",
+      img: "/images/alquiler-disponibilidad-inmediata.webp",
       background: "bg-blue-gray-900",
       inverted: false,
     },
   ];
   const sector = [
-    { title: "Construcción e Industria", img: "/images/construccion.jpg" },
-    { title: "Minería", img: "/images/mineria.jpg" },
-    { title: "Generación Eléctrica", img: "/images/eolica.jpg" },
-    { title: "Naviera", img: "/images/naviero.jpg" },
+    { title: "Construcción e Industria", img: "/images/construccion.webp" },
+    { title: "Minería", img: "/images/mineria.webp" },
+    { title: "Generación Eléctrica", img: "/images/eolica.webp" },
+    { title: "Naviera", img: "/images/naviero.webp" },
     { title: "Maquinaria", img: "/images/maquinaria.webp" },
   ];
   const rent = [

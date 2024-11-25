@@ -92,13 +92,13 @@ export default function Slider({ pharagraph, height }) {
         ))}
       </div>
       <button
-        className="absolute top-1/2 left-3 transform -translate-y-1/2 text-white rounded-full px-3 py-1.5 hover:bg-gray-800/50 duration-500"
+        className="absolute top-1/2 left-2 md:left-3.5 transform -translate-y-1/2 text-white rounded-full px-2.5 py-1 md:px-3 md:py-1.5 hover:bg-gray-800/50 duration-500"
         onClick={prevSlide}
       >
         <i className="fa-solid fa-angle-left fa-lg" aria-hidden="true"></i>
       </button>
       <button
-        className="absolute top-1/2 right-3 transform -translate-y-1/2 text-white rounded-full px-3 py-1.5 hover:bg-gray-800/50 duration-500"
+        className="absolute top-1/2 right-2 md:right-3.5 transform -translate-y-1/2 text-white rounded-full px-2.5 py-1 md:px-3 md:py-1.5 hover:bg-gray-800/50 duration-500"
         onClick={nextSlide}
       >
         <i className="fa-solid fa-angle-right fa-lg" aria-hidden="true"></i>

@@ -7,18 +7,12 @@ import Image from "next/image";
 import React from "react";
 
 export default function page() {
-  const images = [
-    { img: "/images/slider-herramientas.webp" },
-    { img: "/images/industrias.jpg" },
-    { img: "/images/industrias2.jpg" },
-    { img: "/images/slider-asesoria.webp" },
-  ];
   const maintenances = [
     {
       title: "Servicio",
       subtitle: "Mantenimiento de herramientas",
       desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
-      img: "/images/mantenimiento-herramientas.png",
+      img: "/images/mantenimiento-herramientas.webp",
       background: "bg-blue-gray-800",
       inverted: false,
     },
@@ -26,7 +20,7 @@ export default function page() {
       title: "Servicio",
       subtitle: "Mantenimiento de equipos hidráulicos",
       desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
-      img: "/images/mantenimiento-hidraulicos.jpg",
+      img: "/images/mantenimiento-hidraulicos.webp",
       background: "bg-blue-gray-900",
       inverted: true,
     },
@@ -34,7 +28,7 @@ export default function page() {
       title: "Servicio",
       subtitle: "Mantenimiento de cilindros hidráulicos",
       desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
-      img: "/images/mantenimiento-cilindros.jpg",
+      img: "/images/mantenimiento-cilindros.webp",
       background: "bg-gray-900",
       inverted: false,
     },
@@ -42,7 +36,7 @@ export default function page() {
       title: "Servicio",
       subtitle: "Mantenimiento de elevadores de vehículos livianos",
       desc: "Contamos con el servicio técnico de mantenimiento de equipos manuales, neumáticos, hidráulicos y eléctrico que va más allá de lo que se ofrece actualmente, es un servicio técnico integral que tiene como principales objetivos la orientación al cliente, con atención personaliza y profesional.",
-      img: "/images/mantenimiento-elevadores.jpg",
+      img: "/images/mantenimiento-elevadores.webp",
       background: "bg-blue-gray-800",
       inverted: true,
     },

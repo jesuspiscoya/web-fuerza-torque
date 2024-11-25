@@ -16,13 +16,13 @@ export default function page() {
         "Ahorra en costos y espacio con una amplia gama de herramientas neumáticas en alquiler para todo tipo de proyectos, ideal para profesionales y aficionados",
     },
     {
-      img: "/images/industrias.jpg",
+      img: "/images/slider-mantenimiento.webp",
       title: "Mantenimiento Especializado",
       description:
         "Nuestros expertos realizan un mantenimiento preventivo y correctivo para asegurar el máximo rendimiento y durabilidad de tus herramientas",
     },
     {
-      img: "/images/industrias2.jpg",
+      img: "/images/slider-reparacion.webp",
       title: "Reparación Rápida y Eficiente",
       description:
         "Ofrecemos servicios de reparación rápida y efectiva, con piezas originales de alta calidad y un servicio al cliente excepcional",
@@ -149,13 +149,12 @@ export default function page() {
           ))}
         </div>
       </div>
-      <div className="relative flex min-h-screen md:overflow-hidden">
-        <div
-          className="absolute top-0 bottom-0 bg-fixed bg-center bg-no-repeat bg-cover w-full"
-          style={{ backgroundImage: `url('/images/bg-que-hacemos.webp')` }}
-        />
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/75">
-          <div className="container flex flex-col py-7 md:flex-row md:gap-20 text-center items-center h-full">
+      <div
+        className="bg-fixed bg-center bg-no-repeat bg-cover w-full"
+        style={{ backgroundImage: `url('/images/bg-que-hacemos.webp')` }}
+      >
+        <div className="h-full w-full bg-black/75 p-7 md:p-16">
+          <div className="container flex flex-col gap-7 md:flex-row md:gap-20 text-center items-center h-full">
             <ScrollAnimation to="left" className="w-full md:text-start">
               <h1 className="text-4xl md:text-7xl text-yellow-700 md:text-white font-extrabold">
                 ¿Qué hacemos?
@@ -163,7 +162,7 @@ export default function page() {
             </ScrollAnimation>
             <ScrollAnimation
               to="bottom"
-              className="md:w-full text-center p-8 md:px-14 flex flex-col justify-center md:bg-black/80 rounded-3xl md:ring-1 md:shadow-2xl md:shadow-black cursor-default"
+              className="md:w-full text-center md:py-9 md:px-14 flex flex-col gap-12 md:gap-6 justify-center md:bg-black/80 rounded-3xl md:ring-1 md:shadow-2xl md:shadow-black cursor-default"
             >
               <h1 className="hidden md:block text-xl md:text-2xl font-bold text-yellow-700">
                 SERVICIOS DE CALIDAD
@@ -173,7 +172,7 @@ export default function page() {
                 en el mercado, brindando herramientas y servicios especializados
                 de gran calidad.
               </p>
-              <div className="flex flex-col md:flex-row mt-9 gap-7 md:gap-10">
+              <div className="flex flex-col md:flex-row md:mt-6 gap-7 md:gap-10">
                 <div className="rounded-2xl shadow-lg shadow-blue-gray-700 bg-blue-gray-900 border-2 border-yellow-300 w-full p-6 md:py-10 md:px-6 hover:scale-105 duration-500 hover:shadow-md">
                   <i
                     className="fa-solid fa-medal fa-2xl text-white"
