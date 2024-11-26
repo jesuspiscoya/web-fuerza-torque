@@ -47,7 +47,7 @@ export default function page() {
     { title: "Maquinaria", img: "/images/maquinaria.webp" },
   ];
   const rent = [
-    { bgColor: "bg-yellow-600", color: "text-black", title: "Alquiler diario" },
+    { bgColor: "bg-yellow-700", color: "text-black", title: "Alquiler diario" },
     { bgColor: "bg-gray-800", color: "text-white", title: "Alquiler semanal" },
     { bgColor: "bg-white", color: "text-black", title: "Alquiler mensual" },
     {
@@ -55,7 +55,7 @@ export default function page() {
       color: "text-white",
       title: "Alquiler anual",
     },
-    { bgColor: "bg-yellow-700", color: "text-white", title: "Alquiler venta" },
+    { bgColor: "bg-yellow-700", color: "text-black", title: "Alquiler venta" },
   ];
 
   return (
