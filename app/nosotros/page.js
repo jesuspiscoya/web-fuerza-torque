@@ -113,7 +113,7 @@ export default function Page() {
               </h1>
             </ScrollAnimation>
             <ScrollAnimation to="left">
-              <p className="md:text-lg text-yellow-50">
+              <p className="md:text-lg text-white">
                 Somos una empresa 100% peruana, conformada por un equipo técnico
                 multidisciplinario con amplia experiencia en el servicio de
                 mantenimiento, reparación y alquiler de herramientas hidráulicas,
@@ -128,7 +128,7 @@ export default function Page() {
                       className="fa-solid fa-wrench fa-beat mr-4 text-yellow-700"
                       aria-hidden="true"
                     ></i>
-                    <span className="text-yellow-50">{tool}</span>
+                    <span className="text-white">{tool}</span>
                   </div>
                 </ScrollAnimation>
               ))}
@@ -190,7 +190,7 @@ export default function Page() {
                     className="flex flex-col gap-6 text-center md:flex-row md:gap-14 md:text-start text-white p-7 md:px-16 md:py-10 bg-gradient-to-tl to-blue-gray-600 from-blue-gray-900 rounded-xl mt-5"
                   >
                     <i
-                      className={`${icon} text-5xl md:text-6xl text-yellow-500`}
+                      className={`${icon} text-5xl md:text-6xl text-yellow-700`}
                       aria-hidden="true"
                     ></i>
                     <div>
