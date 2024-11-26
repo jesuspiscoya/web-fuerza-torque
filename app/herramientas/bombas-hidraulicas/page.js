@@ -9,7 +9,7 @@ import React from "react";
 export default function page() {
   const tools = [
     {
-      img: "/images/bomba-llave-torque.webp",
+      img: "/images/bomba-hidraulica-torque.webp",
       title: "Bomba hidráulica para llave de torque",
     },
     {

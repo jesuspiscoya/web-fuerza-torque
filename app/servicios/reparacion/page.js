@@ -6,17 +6,11 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 import Image from "next/image";
 
 export default function page() {
-  const images = [
-    { img: "/images/herramientas.webp" },
-    { img: "/images/bg-reparacion.webp" },
-    { img: "/images/slider-herramientas.webp" },
-    { img: "/images/slider-asesoria.webp" },
-  ];
   const repairs = [
     {
       title: "Servicio",
       subtitle: "Reparación de llaves de torque neumáticas",
-      desc: "Nuestro equipo realiza un diagnóstico completo, ajusta y calibra los mecanismos internos, y reemplaza cualquier pieza desgastada. Garantizamos un funcionamiento preciso y eficiente de tu herramienta, asegurando que mantenga su rendimiento óptimo en todo momento.",
+      desc: "Nuestros técnicos expertos realizan un diagnóstico detallado, reparando componentes como válvulas, reguladores y mecanismos internos para asegurar un funcionamiento preciso y seguro. Nos encargamos de restaurar la potencia y fiabilidad de tus herramientas, minimizando tiempos de inactividad y garantizando un rendimiento óptimo.",
       img: "/images/reparacion-llaves-torque.webp",
       background: "bg-blue-gray-800",
       inverted: false,
@@ -24,7 +18,7 @@ export default function page() {
     {
       title: "Servicio",
       subtitle: "Reparación de herramientas eléctricas",
-      desc: "Nuestro servicio incluye la revisión de motores, el reemplazo de piezas dañadas y la restauración de circuitos internos. Nos aseguramos de que tu herramienta vuelva a tener un rendimiento fiable y seguro, prolongando su vida útil con repuestos originales y de alta calidad.",
+      desc: "Realizamos una inspección exhaustiva de los componentes internos, como motores, interruptores y cables, y nos encargamos de la reparación o reemplazo de partes dañadas.",
       img: "/images/reparacion-herramientas-electricas.webp",
       background: "bg-blue-gray-900",
       inverted: true,
@@ -32,7 +26,7 @@ export default function page() {
     {
       title: "Servicio",
       subtitle: "Reparación de llaves de impacto neumáticas",
-      desc: "Ofrecemos reparación integral de llaves de impacto neumáticas, con diagnóstico de fallos, limpieza a fondo y ajuste de los mecanismos de impacto. Reemplazamos piezas internas como pistones y anillos de seguridad, asegurando que la herramienta recupere toda su potencia y funcionalidad para trabajos pesados.",
+      desc: "Realizamos reparaciones completas de estos equipos, desde la revisión de sus mecanismos internos hasta la sustitución de piezas desgastadas como rotores y martillos. Aseguramos que tus llaves de impacto recuperen su capacidad de trabajo.",
       img: "/images/reparacion-llaves-impacto.webp",
       background: "bg-gray-900",
       inverted: false,
@@ -40,7 +34,7 @@ export default function page() {
     {
       title: "Servicio",
       subtitle: "Reparación de gata hidráulica pesadas",
-      desc: "Realizamos un diagnóstico completo del sistema hidráulico, revisando y ajustando bombas, válvulas, mangueras y sellos. Nuestro equipo se asegura de que tu gata recupere su capacidad máxima de carga, operando con seguridad y fiabilidad para trabajos exigentes.",
+      desc: "Reparamos gatas hidráulicas pesadas, una herramienta esencial para el levantamiento de cargas pesadas. Nuestro servicio incluye la inspección de componentes clave, como bombas, válvulas y sellos, y la reparación de cualquier daño o desgaste.",
       img: "/images/raparacion-gata-pesada.webp",
       background: "bg-blue-gray-800",
       inverted: true,
@@ -48,7 +42,7 @@ export default function page() {
     {
       title: "Servicio",
       subtitle: "Reparación de cilindros hidráulicos",
-      desc: "Realizamos una evaluación detallada de sus componentes. Reemplazamos sellos, juntas y vástagos dañados, y revisamos el sistema de presión para garantizar que el cilindro funcione con la máxima eficacia.",
+      desc: "Nos especializamos en la reparación de cilindros hidráulicos, componentes críticos para sistemas de alta presión. Diagnóstico, desmontaje, limpieza y reemplazo de piezas dañadas son parte de nuestro servicio integral. Tras la reparación, realizamos pruebas de presión y funcionamiento para garantizar que tus cilindros hidráulicos operen de forma eficiente y segura.",
       img: "/images/reparacion-cilindros-hidraulicos.webp",
       background: "bg-blue-gray-900",
       inverted: false,
@@ -75,36 +69,6 @@ export default function page() {
       {repairs.map((item, key) => (
         <Content key={key} element={item} />
       ))}
-      <div className="p-7 md:p-16 bg-blue-gray-900">
-        <div className="container text-center flex flex-col gap-8 md:gap-10">
-          <ScrollAnimation to="left">
-            <h1
-              className={`text-3xl font-bold text-yellow-700 ${rubik.className}`}
-            >
-              Galería
-            </h1>
-          </ScrollAnimation>
-          <div className="grid md:grid-cols-3 gap-5">
-            {[...images, ...images].map(({ img }, key) => (
-              <ScrollAnimation
-                key={key}
-                to="bottom"
-                className="relative"
-                delay={key * 100}
-              >
-                <Image
-                  src={img}
-                  alt="Galería de servicios"
-                  width={1000}
-                  height={1000}
-                  className="h-48 w-full md:h-80 object-cover"
-                />
-                <div className="absolute hover:bg-black/50 duration-[600ms] top-0 bottom-0 left-0 right-0 cursor-pointer" />
-              </ScrollAnimation>
-            ))}
-          </div>
-        </div>
-      </div>
       <Footer />
     </>
   );

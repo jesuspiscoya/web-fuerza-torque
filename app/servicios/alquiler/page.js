@@ -14,44 +14,29 @@ export default function page() {
   ];
   const services = [
     {
-      title: "Soluciones",
-      subtitle: "Obras eventuales",
-      desc: "Si necesitas equipos solo para proyectos puntuales, el alquiler es la opción ideal.",
-      img: "/images/alquiler-obras-eventuales.webp",
-      background: "bg-blue-gray-900",
-      inverted: false,
+      title: "Obras eventuales",
+      description: "Si necesitas equipos solo para proyectos puntuales, el alquiler es la opción ideal.",
+      image: "/images/alquiler-obras-eventuales.webp",
     },
     {
-      title: "Soluciones",
-      subtitle: "Herramientas de respaldo temporales",
-      desc: "Disponemos de equipos para cubrir cualquier contingencia, manteniendo la continuidad de tu trabajo sin interrupciones.",
-      img: "/images/alquiler-herramientas-temporales.webp",
-      background: "bg-blue-gray-800",
-      inverted: true,
+      title: "Herramientas de respaldo temporales",
+      description: "Disponemos de equipos para cubrir cualquier contingencia, manteniendo la continuidad de tu trabajo sin interrupciones.",
+      image: "/images/alquiler-herramientas-temporales.webp",
     },
     {
-      title: "Soluciones",
-      subtitle: "Aumento de capacidad productiva a corto plazo",
-      desc: "Si enfrentas picos de demanda, tenemos las herramientas que necesitas para expandir tu capacidad de manera inmediata.",
-      img: "/images/alquiler-aumento-capacidad.webp",
-      background: "bg-gray-900",
-      inverted: false,
+      title: "Aumento de capacidad productiva a corto plazo",
+      description: "Si enfrentas picos de demanda, tenemos las herramientas que necesitas para expandir tu capacidad de manera inmediata.",
+      image: "/images/alquiler-aumento-capacidad.webp",
     },
     {
-      title: "Soluciones",
-      subtitle: "Falta de presupuesto para compra de material",
-      desc: "Si no cuentas con el presupuesto necesario para adquirir nuevos equipos, el alquiler te permite acceder a maquinaria de calidad sin incurrir en grandes gastos.",
-      img: "/images/alquiler-falta-presupuesto.webp",
-      background: "bg-blue-gray-800",
-      inverted: true,
+      title: "Falta de presupuesto para compra de material",
+      description: "Si no cuentas con el presupuesto necesario para adquirir nuevos equipos, el alquiler te permite acceder a maquinaria de calidad sin incurrir en grandes gastos.",
+      image: "/images/alquiler-falta-presupuesto.webp",
     },
     {
-      title: "Soluciones",
-      subtitle: "Disponibilidad inmediata de herramientas",
-      desc: "Gracias a nuestra amplia disponibilidad, puedes contar con los equipos que necesitas de forma rápida y sin demoras.",
-      img: "/images/alquiler-disponibilidad-inmediata.webp",
-      background: "bg-blue-gray-900",
-      inverted: false,
+      title: "Disponibilidad inmediata de herramientas",
+      description: "Gracias a nuestra amplia disponibilidad, puedes contar con los equipos que necesitas de forma rápida y sin demoras.",
+      image: "/images/alquiler-disponibilidad-inmediata.webp",
     },
   ];
   const sector = [
@@ -117,9 +102,31 @@ export default function page() {
           </div>
         </div>
       </div>
-      {services.map((item, key) => (
-        <Content key={key} element={item} />
-      ))}
+      <div className="p-7 md:p-16 bg-blue-gray-900">
+        <div className="container flex flex-col md:grid md:grid-cols-2 gap-7 md:gap-10">
+          {services.map(({ title, description, image }, key) => (
+            <ScrollAnimation
+              to="bottom"
+              key={key}
+              className={`relative rounded-lg overflow-hidden cursor-default duration-500 shadow-lg shadow-black/70 h-72 md:h-96 hover:scale-[1.02] hover:-translate-y-1.5 ${
+                key == services.length - 1
+                  ? "w-full md:w-1/2 col-span-2 mx-auto"
+                  : "w-full"
+              }`}
+            >
+              <Image src={image} alt={title} fill className="object-cover" />
+              <div className="absolute opacity-0 pt-52 hover:pt-0 hover:opacity-100 flex flex-col gap-5 bg-black/80 top-0 bottom-0 w-full justify-center text-center duration-500 p-7 md:p-10">
+                <h1
+                  className={`text-yellow-700 font-bold text-2xl md:text-3xl ${rubik.className}`}
+                >
+                  {title}
+                </h1>
+                <p className="text-gray-400 text-sm md:text-base">{description}</p>
+              </div>
+            </ScrollAnimation>
+          ))}
+        </div>
+      </div>
       <div className="p-7 md:p-16 bg-gradient-to-t to-black from-blue-gray-900">
         <div className="container flex flex-col items-center gap-10 md:gap-20">
           <ScrollAnimation to="top">
