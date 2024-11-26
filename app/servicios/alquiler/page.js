@@ -139,7 +139,7 @@ export default function page() {
           <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:w-4/5">
             <ScrollAnimation to="left" delay={200}>
               <i
-                className="fa-regular fa-handshake text-5xl md:text-8xl text-yellow-300"
+                className="fa-regular fa-handshake text-5xl md:text-8xl text-yellow-700"
                 aria-hidden="true"
               ></i>
             </ScrollAnimation>
