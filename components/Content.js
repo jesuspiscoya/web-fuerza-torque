@@ -12,11 +12,11 @@ export default function Content({ element }) {
       >
         <div className="flex flex-col text-center md:text-left gap-4 md:gap-5 w-full">
           <ScrollAnimation to={`${element.inverted ? "right" : "left"}`}>
-            <span
+            <h2
               className={`md:text-lg font-bold text-white ${rubik.className}`}
             >
               {element.title}
-            </span>
+            </h2>
           </ScrollAnimation>
           <ScrollAnimation
             to={`${element.inverted ? "right" : "left"}`}
@@ -32,7 +32,7 @@ export default function Content({ element }) {
             to={`${element.inverted ? "right" : "left"}`}
             delay={400}
           >
-            <p className="text-gray-300 text-sm md:text-base">{element.desc}</p>
+            <h3 className="text-gray-300 text-sm md:text-base">{element.desc}</h3>
           </ScrollAnimation>
         </div>
         <ScrollAnimation

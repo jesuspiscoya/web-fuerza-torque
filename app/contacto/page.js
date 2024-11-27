@@ -61,9 +61,9 @@ export default function page() {
           </div>
           <div className="flex flex-col gap-8 w-full text-center md:text-start">
             <div className="flex flex-col gap-2">
-              <span className={`font-bold text-white ${rubik.className}`}>
+              <h2 className={`font-bold text-white ${rubik.className}`}>
                 Contáctenos
-              </span>
+              </h2>
               <h1
                 className={`text-3xl md:text-4xl font-bold text-yellow-700 ${rubik.className}`}
               >
@@ -76,9 +76,9 @@ export default function page() {
       </div>
       <div className="bg-black/85">
         <div className="container flex flex-col gap-8 p-7 md:p-16">
-          <span className={`font-bold text-white text-xl ${rubik.className}`}>
+          <h1 className={`font-bold text-white text-xl ${rubik.className}`}>
             Información de contacto
-          </span>
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {contact.map(({ icon, text }, key) => (
               <div
@@ -92,11 +92,11 @@ export default function page() {
                   ></i>
                   <hr className="mt-3 mx-auto border-red-500 w-20" />
                 </div>
-                <span
+                <h1
                   className={`break-words font-medium text-blue-gray-800 ${rubik.className}`}
                 >
                   {text}
-                </span>
+                </h1>
               </div>
             ))}
           </div>

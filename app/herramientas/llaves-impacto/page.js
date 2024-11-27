@@ -10,7 +10,15 @@ export default function page() {
   const tools = [
     {
       img: "/images/llave-ingersol-rand.webp",
-      title: "Llaves de impacto Ingersol Rand",
+      title: "Llave de impacto Ingersol Rand",
+    },
+    {
+      img: "/images/llave-impacto.webp",
+      title: "Llave de impacto Serie 5980 Ingersol Rand",
+    },
+    {
+      img: "/images/llave-impacto-ti.webp",
+      title: "Llave de impacto serie 3955B2Ti Ingersol Rand",
     },
   ];
 

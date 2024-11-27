@@ -1,5 +1,4 @@
 import { rubik } from "@/app/fonts";
-import Content from "@/components/Content";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/Navbar";
 import ScrollAnimation from "@/components/ScrollAnimation";
@@ -62,8 +61,8 @@ export default function page() {
     <>
       <NavBar />
       <div
-        className="h-80 md:h-[25rem] bg-no-repeat bg-cover"
-        style={{ backgroundImage: `url('/images/bg-alquiler.webp')` }}
+        className="h-80 md:h-[25rem] bg-no-repeat bg-cover bg-center"
+        style={{ backgroundImage: `url('/images/bg-alquiler2.webp')` }}
       >
         <div className="w-full h-full bg-black/80 flex justify-center items-center">
           <ScrollAnimation to="top">
@@ -92,11 +91,11 @@ export default function page() {
                 delay={key * 100}
                 className="w-80 md:w-[22rem] cursor-pointer"
               >
-                <div
+                <h1
                   className={`${bgColor} ${color} h-full content-center text-center text-3xl font-extrabold px-10 py-20 ${rubik.className}`}
                 >
                   {title}
-                </div>
+                </h1>
               </ScrollAnimation>
             ))}
           </div>
@@ -121,7 +120,7 @@ export default function page() {
                 >
                   {title}
                 </h1>
-                <p className="text-gray-400 text-sm md:text-base">{description}</p>
+                <h2 className="text-gray-400 text-sm md:text-base">{description}</h2>
               </div>
             </ScrollAnimation>
           ))}
@@ -144,19 +143,19 @@ export default function page() {
               ></i>
             </ScrollAnimation>
             <ScrollAnimation to="right" delay={400}>
-              <p className="text-sm md:text-lg text-gray-300 text-center md:text-start">
+              <h3 className="text-sm md:text-lg text-gray-300 text-center md:text-start">
                 Las tarifas de alquiler varían según el tiempo de uso y el
                 modelo de llave de torque seleccionado. A medida que aumenta la
                 duración del alquiler, los precios se reducen proporcionalmente.
-              </p>
+              </h3>
             </ScrollAnimation>
           </div>
           <ScrollAnimation to="bottom" className="text-center">
-            <span
+            <h1
               className={`text-lg md:text-2xl font-bold text-white ${rubik.className}`}
             >
               Rubros a los que realizamos alquiler
-            </span>
+            </h1>
           </ScrollAnimation>
           <div className="flex flex-wrap gap-7 justify-center w-full">
             {sector.map(({ title, img }, key) => (
@@ -168,9 +167,9 @@ export default function page() {
               >
                 <Image src={img} alt={title} fill className="object-cover" />
                 <div className="absolute flex top-0 bottom-0 left-0 right-0 opacity-0 duration-500 bg-black/70 p-5 md:p-10 hover:opacity-100">
-                  <span className="text-2xl md:text-3xl font-bold text-yellow-700 text-center m-auto">
+                  <h1 className="text-2xl md:text-3xl font-bold text-yellow-700 text-center m-auto">
                     {title}
-                  </span>
+                  </h1>
                 </div>
               </ScrollAnimation>
             ))}

@@ -10,7 +10,15 @@ export default function page() {
   const tools = [
     {
       img: "/images/remachadora-huck.webp",
-      title: "Remachadora hidráulica tipo huck",
+      title: "Remachadora hidráulica tipo Huck",
+    },
+    {
+      img: "/images/bomba-hidraulica-huck.webp",
+      title: "Bomba hidráulica Huck",
+    },
+    {
+      img: "/images/remachadora-hidraulica-huck.webp",
+      title: "Remachadora hidráulica Huck",
     },
   ];
 

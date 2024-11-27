@@ -3,7 +3,6 @@ import Content from "@/components/Content";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/Navbar";
 import ScrollAnimation from "@/components/ScrollAnimation";
-import Image from "next/image";
 
 export default function page() {
   const repairs = [

@@ -91,7 +91,7 @@ export default function Page() {
             </h1>
           </ScrollAnimation>
           <button
-            className="absolute flex flex-col gap-3 items-center text-gray-200 font-semibold bottom-7 animate-bounce"
+            className="absolute flex flex-col gap-3 items-center text-gray-200 font-semibold bottom-5 animate-bounce"
             onClick={handleScroll}
           >
             Conoce más sobre nosotros
@@ -113,12 +113,12 @@ export default function Page() {
               </h1>
             </ScrollAnimation>
             <ScrollAnimation to="left">
-              <p className="md:text-lg text-white">
+              <h2 className="md:text-lg text-white">
                 Somos una empresa 100% peruana, conformada por un equipo técnico
                 multidisciplinario con amplia experiencia en el servicio de
                 mantenimiento, reparación y alquiler de herramientas hidráulicas,
                 neumáticas y eléctricas.
-              </p>
+              </h2>
             </ScrollAnimation>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start md:gap-7">
               {tools.map((tool, key) => (
@@ -128,7 +128,7 @@ export default function Page() {
                       className="fa-solid fa-wrench fa-beat mr-4 text-yellow-700"
                       aria-hidden="true"
                     ></i>
-                    <span className="text-white">{tool}</span>
+                    <h3 className="text-white">{tool}</h3>
                   </div>
                 </ScrollAnimation>
               ))}
@@ -202,7 +202,7 @@ export default function Page() {
                       {Array.isArray(desc) ? (
                         <div className="grid md:grid-cols-5 gap-8 mt-10">
                           {desc.map(({ icon, desc }, key) => (
-                            <div
+                            <h1
                               key={key}
                               className={`p-5 bg-blue-gray-600 shadow-lg hover:bg-black/50 hover:shadow-black/70 hover:-translate-y-1.5 hover:text- text-xl rounded-md flex flex-col gap-4 justify-center text-center font-bold cursor-default duration-500 ${rubik.className}`}
                             >
@@ -211,15 +211,15 @@ export default function Page() {
                                 aria-hidden="true"
                               ></i>
                               {desc}
-                            </div>
+                            </h1>
                           ))}
                         </div>
                       ) : (
-                        <p
+                        <h2
                           className={`text-base mt-2 md:text-xl md:mt-5 ${rubik.className}`}
                         >
                           {desc}
-                        </p>
+                        </h2>
                       )}
                     </div>
                   </TabPanel>

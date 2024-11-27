@@ -45,7 +45,7 @@ export default function page() {
     {
       title: "Mantenimiento",
       description:
-        "Realizamos mantenimientos profesionales de tipo preventivo, correctivo y predictivo",
+        "Realizamos mantenimientos profesionales de tipo preventivo, correctivo y predictivo.",
       image: "/images/mantenimiento.webp",
       url: "/servicios/mantenimiento",
     },
@@ -102,17 +102,9 @@ export default function page() {
       <NavBar />
       <Slider pharagraph={slider} height="h-screen" />
       <div className="bg-gradient-to-t to-gray-900 from-blue-gray-900 text-center p-7 md:p-16">
-        <ScrollAnimation to="top">
-          <span
-            className={`text-yellow-700
-           font-semibold ${rubik.className}`}
-          >
-            Más de {year - 2020} años de experiencia
-          </span>
-        </ScrollAnimation>
         <ScrollAnimation to="left" delay={300}>
           <h1
-            className={`text-3xl md:text-4xl text-white font-bold mt-4 mb-10 md:mb-14 ${rubik.className}`}
+            className={`text-3xl md:text-4xl text-yellow-700 font-bold mb-10 md:mb-14 ${rubik.className}`}
           >
             Nuestros Servicios
           </h1>
@@ -137,7 +129,7 @@ export default function page() {
                 >
                   {title}
                 </h1>
-                <p className="text-gray-400">{description}</p>
+                <h2 className="text-gray-400">{description}</h2>
                 <Link
                   href={url}
                   className="text-white hover:text-yellow-700 font-semibold duration-500 px-3 py-1 rounded-lg"
@@ -167,11 +159,11 @@ export default function page() {
               <h1 className="hidden md:block text-xl md:text-2xl font-bold text-yellow-700">
                 SERVICIOS DE CALIDAD
               </h1>
-              <p className="text-gray-300 text-sm">
+              <h2 className="text-gray-300 text-sm">
                 <strong>FUERZA Y TOQUE COMPANY</strong> se destaca como un líder
                 en el mercado, brindando herramientas y servicios especializados
                 de gran calidad.
-              </p>
+              </h2>
               <div className="flex flex-col md:flex-row md:mt-6 gap-7 md:gap-10">
                 <div className="rounded-2xl shadow-lg shadow-blue-gray-700 bg-blue-gray-900 border-2 border-yellow-300 w-full p-6 md:py-10 md:px-6 hover:scale-105 duration-500 hover:shadow-md">
                   <i

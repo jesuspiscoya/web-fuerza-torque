@@ -21,16 +21,16 @@ export default function page() {
       title: "Bomba neumática para llave de torque",
     },
     {
-      img: "/images/bomba-hidraulica-pistones.webp",
-      title: "Bomba hidráulica para pistones",
+      img: "/images/bomba-torque-electrica.webp",
+      title: "Bomba de torque eléctrica Hytorc",
     },
     {
       img: "/images/bomba-hidraulica-cilindros.webp",
       title: "Bomba hidráulica para cilindros doble",
     },
     {
-      img: "/images/bomba-hidraulica-simple.webp",
-      title: "Bomba hidráulica de simple efecto",
+      img: "/images/bomba-torque-neumatica.webp",
+      title: "Bomba de torque neumática Hytorc",
     },
   ];
 
