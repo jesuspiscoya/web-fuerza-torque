@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://fuerzaytorque.com.pe
+
+# Sitemaps
+Sitemap: https://fuerzaytorque.com.pe/sitemap.xml

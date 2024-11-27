@@ -11,7 +11,7 @@ export default function page() {
   const slider = [
     {
       img: "/images/slider-herramientas.webp",
-      title: "Alquiler de Herramientas de Torque Hidráulicas y Neumáticas",
+      title: "Alquiler de herramientas de torque hidráulicas y neumáticas",
       description:
         "Ahorra en costos y espacio con una amplia gama de herramientas neumáticas en alquiler para todo tipo de proyectos, ideal para profesionales y aficionados",
     },
@@ -23,13 +23,13 @@ export default function page() {
     },
     {
       img: "/images/slider-reparacion.webp",
-      title: "Reparación Rápida y Eficiente",
+      title: "Reparación rápida y eficiente",
       description:
         "Ofrecemos servicios de reparación rápida y efectiva, con piezas originales de alta calidad y un servicio al cliente excepcional",
     },
     {
       img: "/images/slider-asesoria.webp",
-      title: "Asesoría Personalizada",
+      title: "Asesoría personalizada",
       description:
         "¿No sabes qué herramienta necesitas? Nuestro equipo te ofrece asesoría personalizada para encontrar la solución perfecta según tus requerimientos y presupuesto",
     },
