@@ -1,12 +1,9 @@
-import { poppins } from "./fonts";
+import { poppins } from "../fonts";
 import Script from "next/script";
-import "./globals.css";
+import "../globals.css";
 
 export const metadata = {
-  title: {
-    default: "Fuerza y Torque Company",
-    template: "%s - Fuerza y Torque Company",
-  },
+  title: "Nosotros - Fuerza y Torque Company",
   description:
     "Servicios de alquiler, mantenimiento y reparación de herramientas de torque, hidráulicas y neumáticas.",
   icons: {

@@ -4,6 +4,10 @@ import NavBar from "@/components/Navbar";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Alquiler de herramientas",
+};
+
 export default function page() {
   const images = [
     { img: "/images/herramientas.webp" },
@@ -14,27 +18,32 @@ export default function page() {
   const services = [
     {
       title: "Obras eventuales",
-      description: "Si necesitas equipos solo para proyectos puntuales, el alquiler es la opción ideal.",
+      description:
+        "Si necesitas equipos solo para proyectos puntuales, el alquiler es la opción ideal.",
       image: "/images/alquiler-obras-eventuales.webp",
     },
     {
       title: "Herramientas de respaldo temporales",
-      description: "Disponemos de equipos para cubrir cualquier contingencia, manteniendo la continuidad de tu trabajo sin interrupciones.",
+      description:
+        "Disponemos de equipos para cubrir cualquier contingencia, manteniendo la continuidad de tu trabajo sin interrupciones.",
       image: "/images/alquiler-herramientas-temporales.webp",
     },
     {
       title: "Aumento de capacidad productiva a corto plazo",
-      description: "Si enfrentas picos de demanda, tenemos las herramientas que necesitas para expandir tu capacidad de manera inmediata.",
+      description:
+        "Si enfrentas picos de demanda, tenemos las herramientas que necesitas para expandir tu capacidad de manera inmediata.",
       image: "/images/alquiler-aumento-capacidad.webp",
     },
     {
       title: "Falta de presupuesto para compra de material",
-      description: "Si no cuentas con el presupuesto necesario para adquirir nuevos equipos, el alquiler te permite acceder a maquinaria de calidad sin incurrir en grandes gastos.",
+      description:
+        "Si no cuentas con el presupuesto necesario para adquirir nuevos equipos, el alquiler te permite acceder a maquinaria de calidad sin incurrir en grandes gastos.",
       image: "/images/alquiler-falta-presupuesto.webp",
     },
     {
       title: "Disponibilidad inmediata de herramientas",
-      description: "Gracias a nuestra amplia disponibilidad, puedes contar con los equipos que necesitas de forma rápida y sin demoras.",
+      description:
+        "Gracias a nuestra amplia disponibilidad, puedes contar con los equipos que necesitas de forma rápida y sin demoras.",
       image: "/images/alquiler-disponibilidad-inmediata.webp",
     },
   ];
@@ -120,7 +129,9 @@ export default function page() {
                 >
                   {title}
                 </h1>
-                <h2 className="text-gray-400 text-sm md:text-base">{description}</h2>
+                <h2 className="text-gray-400 text-sm md:text-base">
+                  {description}
+                </h2>
               </div>
             </ScrollAnimation>
           ))}

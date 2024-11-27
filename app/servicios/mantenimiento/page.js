@@ -5,6 +5,10 @@ import NavBar from "@/components/Navbar";
 import ScrollAnimation from "@/components/ScrollAnimation";
 import React from "react";
 
+export const metadata = {
+  title: "Mantenimiento de herramientas",
+};
+
 export default function page() {
   const maintenances = [
     {

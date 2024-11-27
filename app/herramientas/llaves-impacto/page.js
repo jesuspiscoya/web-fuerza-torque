@@ -6,6 +6,10 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 import Image from "next/image";
 import React from "react";
 
+export const metadata = {
+  title: "Llaves de impacto",
+};
+
 export default function page() {
   const tools = [
     {

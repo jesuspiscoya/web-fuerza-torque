@@ -4,6 +4,10 @@ import Footer from "@/components/Footer";
 import NavBar from "@/components/Navbar";
 import ScrollAnimation from "@/components/ScrollAnimation";
 
+export const metadata = {
+  title: "Reparación de herramientas",
+};
+
 export default function page() {
   const repairs = [
     {

@@ -6,6 +6,10 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 import Image from "next/image";
 import React from "react";
 
+export const metadata = {
+  title: "Bombas hidráulicas",
+};
+
 export default function page() {
   const tools = [
     {

@@ -5,6 +5,10 @@ import ScrollAnimation from "@/components/ScrollAnimation";
 import Image from "next/image";
 import React from "react";
 
+export const metadata = {
+  title: "Otras Herramientas",
+};
+
 export default function page() {
   const tools = [
     {

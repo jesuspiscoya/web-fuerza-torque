@@ -115,9 +115,8 @@ export default function Page() {
             <ScrollAnimation to="left">
               <h2 className="md:text-lg text-white">
                 Somos una empresa 100% peruana, conformada por un equipo técnico
-                multidisciplinario con amplia experiencia en el servicio de
-                mantenimiento, reparación y alquiler de herramientas hidráulicas,
-                neumáticas y eléctricas.
+                mantenimiento, reparación y alquiler de herramientas
+                hidráulicas, neumáticas y eléctricas.
               </h2>
             </ScrollAnimation>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start md:gap-7">
