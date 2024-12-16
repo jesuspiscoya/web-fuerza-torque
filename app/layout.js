@@ -8,7 +8,7 @@ export const metadata = {
     template: "%s - Fuerza y Torque Company",
   },
   description:
-    "Servicios de alquiler, mantenimiento y reparación de herramientas de torque, hidráulicas y neumáticas.",
+    "Servicios de alquiler, mantenimiento y reparación de herramientas de torque, hidráulicas y neumáticas, de la marca HYTORC, RAID, Huck y más.",
   icons: {
     icon: "/logo.png",
   },
